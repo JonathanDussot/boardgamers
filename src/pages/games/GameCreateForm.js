@@ -5,10 +5,11 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import Alert from "react-bootstrap/Alert";
 
 import Upload from "../../assets/upload.png";
 
-import styles from "../../styles/PostCreateEditForm.module.css";
+import styles from "../../styles/GameCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
@@ -16,7 +17,7 @@ import { Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
-function PostCreateForm() {
+function GameCreateForm() {
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
@@ -78,15 +79,19 @@ function PostCreateForm() {
     formData.append('max_players', max_players);
     formData.append('solo_play', solo_play);
     formData.append('genre_filter', genre_filter);
-    formData.append('image', imageInput.current.files[0]);
+
+    if (imageInput?.current?.files[0]) {
+      formData.append("image", imageInput?.current?.files[0]);
+    }
 
     try {
       const { data } = await axiosReq.post('/games/', formData);
+      console.log(data);
       history.push(`/games/${data.id}`)
     } catch (err) {
-      console.log(err)
+      console.log(err.response?.data); // Log the error response data
       if (err.response?.status !== 401) {
-        setErrors(err.response?.data)
+        setErrors(err.response?.data);
       }
     }
   }
@@ -104,6 +109,12 @@ function PostCreateForm() {
           required
         />
       </Form.Group>
+      {errors?.title?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
       <Form.Group>
         <Form.Label>Description</Form.Label>
         <Form.Control
@@ -116,6 +127,12 @@ function PostCreateForm() {
           required
         />
       </Form.Group>
+      {errors?.description?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
       <Form.Group>
         <Form.Label>Designer</Form.Label>
         <Form.Control
@@ -124,7 +141,6 @@ function PostCreateForm() {
           value={designer}
           onChange={handleChange}
           placeholder="Designer"
-          required
         />
       </Form.Group>
       <Form.Group>
@@ -135,7 +151,6 @@ function PostCreateForm() {
           value={artist}
           onChange={handleChange}
           placeholder="Artist"
-          required
         />
       </Form.Group>
       <Form.Group>
@@ -146,7 +161,6 @@ function PostCreateForm() {
           value={publisher}
           onChange={handleChange}
           placeholder="Publisher"
-          required
         />
       </Form.Group>
       <Form.Group>
@@ -202,6 +216,11 @@ function PostCreateForm() {
           <option value="wargame">Wargame</option>
         </Form.Control>
       </Form.Group>
+      {errors?.content?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
@@ -256,6 +275,12 @@ function PostCreateForm() {
                 ref={imageInput}
               />
             </Form.Group>
+            {errors?.title?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
+
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
@@ -267,4 +292,4 @@ function PostCreateForm() {
   );
 }
 
-export default PostCreateForm;
+export default GameCreateForm;
