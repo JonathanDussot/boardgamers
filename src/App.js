@@ -7,14 +7,35 @@ import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import GameCreateForm from "./pages/games/GameCreateForm";
 import GamePage from "./pages/games/GamePage";
+import GamesPage from "./pages/games/GamesPage";
+import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 function App() {
+  const currentUser = useCurrentUser();
+  const profile_id = currentUser?.profile_id || "";
+
   return (
     <div className={styles.App}>
       <NavBar />
       <Container className={styles.Main}>
         <Switch>
-          <Route exact path="/" render={() => <h1>Home page</h1>} />
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <GamesPage message="No results found. Adjust he search keyword." />
+            )}
+          />
+          <Route
+            exact
+            path="/liked"
+            render={() => (
+              <GamesPage
+                message="No results found. Adjust he search keyword or like a post."
+                filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
+              />
+            )}
+          />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/games/create" render={() => <GameCreateForm />} />
