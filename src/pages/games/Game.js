@@ -2,9 +2,10 @@ import React from 'react'
 import styles from "../../styles/Game.module.css"
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import { MoreDropdown } from '../../components/MoreDropdown';
 
 const Game = (props) => {
   const {
@@ -32,6 +33,20 @@ const Game = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner
+  const history = useHistory();
+
+  const handleEdit = () => {
+    history.push(`/games/${id}/edit`);
+  };
+
+  const handleDelete = async () => {
+    try {
+      await axiosRes.delete(`/games/${id}/`);
+      history.goBack();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const handleLike = async () => {
     try {
@@ -74,7 +89,10 @@ const Game = (props) => {
         </Link>
         <div className="d-flex align-items-center">
           <span>{updated_at}</span>
-          {is_owner && gamePage && "..."}
+          {is_owner && gamePage && <MoreDropdown
+            handleEdit={handleEdit}
+            handleDelete={handleDelete}
+          />}
         </div>
       </Media>
     </Card.Body>
