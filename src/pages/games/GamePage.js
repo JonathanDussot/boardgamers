@@ -13,6 +13,11 @@ import Review from "../reviews/Review";
 import ReviewCreateForm from "../reviews/ReviewCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
+import InfiniteScroll from "react-infinite-scroll-component";
+import Asset from "../../components/Asset";
+import { fetchMoreData } from "../../utils/utils";
+import Rating from './../../components/Rating'
+
 function GamePage() {
     const { id } = useParams();
     const [game, setGame] = useState({ results: [] });
@@ -44,6 +49,8 @@ function GamePage() {
                 <p>Popular profiles for mobile</p>
                 <Game {...game.results[0]} setGames={setGame} gamePage />
                 <Container className={appStyles.Content}>
+                    <div className={appStyles.Divider}></div>
+                    <Rating gameId={id} />
                     {currentUser ? (
                         <ReviewCreateForm
                             profile_id={currentUser.profile_id}
@@ -56,14 +63,20 @@ function GamePage() {
                         "Reviews"
                     ) : null}
                     {reviews.results.length ? (
-                        reviews.results.map((review) => (
-                            <Review
-                                key={review.id}
-                                {...review}
-                                setGame={setGame}
-                                setReviews={setReviews}
-                            />
-                        ))
+                        <InfiniteScroll
+                            children={reviews.results.map((review) => (
+                                <Review
+                                    key={review.id}
+                                    {...review}
+                                    setGame={setGame}
+                                    setReviews={setReviews}
+                                />
+                            ))}
+                            dataLength={reviews.results.length}
+                            loader={<Asset spinner />}
+                            hasMore={!!reviews.next}
+                            next={() => fetchMoreData(reviews, setReviews)}
+                        />
                     ) : currentUser ? (
                         <span>No reviews yet, be the first to review this game!</span>
                     ) : (
