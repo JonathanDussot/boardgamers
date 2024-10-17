@@ -51,6 +51,16 @@ const Rating = ({ gameId }) => {
             return;
         }
 
+        const existingRating = ratings.find((rating) => rating.owner === currentUser.username);
+
+        // If an existing rating is found, update the editing state instead of submitting a new rating
+        if (existingRating) {
+            alert('You have already rated this game. Please edit your existing rating.');
+            setEditingRatingId(existingRating.id); // Set the ID for editing
+            setEditingValue(existingRating.rating); // Pre-fill the editing value
+            return;
+        }
+
         try {
             const { data } = await axiosReq.post('/ratings/', {
                 rating: userRating,
@@ -69,17 +79,18 @@ const Rating = ({ gameId }) => {
 
     const handleEditRating = async (ratingId) => {
         try {
+            console.log(`Updating rating with ID: ${ratingId}, new value: ${editingValue}`);
             const { data } = await axiosReq.put(`/ratings/${ratingId}/`, {
                 rating: editingValue,
                 game: gameId
             });
+            console.log('Updated data received:', data);
             setRatings((prevRatings) =>
                 prevRatings.map((rating) =>
                     rating.id === ratingId ? { ...rating, rating: data.rating } : rating
                 )
             );
 
-            // Recalculate the average rating after editing
             const total = ratings.reduce((sum, rating) => sum + rating.rating, 0) - (ratings.find(r => r.id === ratingId).rating) + editingValue;
             const newAvg = total / ratings.length;
             setAverageRating(newAvg.toFixed(1)); // Round to 1 decimal
@@ -89,6 +100,16 @@ const Rating = ({ gameId }) => {
             setEditingValue(null);
         } catch (err) {
             console.error('Error editing rating:', err);
+
+            if (err.response) {
+                console.error('Response data:', err.response.data);
+                console.error('Response status:', err.response.status);
+                console.error('Response headers:', err.response.headers);
+            } else if (err.request) {
+                console.error('No response received:', err.request);
+            } else {
+                console.error('Error setting up the request:', err.message);
+            }
         }
     };
 
@@ -96,16 +117,6 @@ const Rating = ({ gameId }) => {
         try {
             await axiosReq.delete(`/ratings/${ratingId}/`);
             window.location.reload();
-            // const newRatings = ratings.filter(rating => rating.id !== ratingId)
-            // setRatings(newRatings)
-            // setRatings((prevRatings) => prevRatings.filter((rating) => rating.id !== ratingId));
-            // console.log("Ratings after delete: ", ratings)
-
-            // Update average rating
-            // const total = newRatings.reduce((sum, rating) => sum + rating.rating, 0);
-            // const newAvg = total / (ratings.length - 1); // Adjust for deleted rating
-            // const newAvg = total / ratings.length;
-            // setAverageRating(newAvg.toFixed(1));
         } catch (err) {
             console.error('Error deleting rating:', err);
         }
@@ -113,6 +124,8 @@ const Rating = ({ gameId }) => {
 
     if (loading) return <Asset spinner />; // Display a spinner while loading
     if (error) return <div>There was an error loading the ratings.</div>;
+
+    const userHasRated = ratings.some((rating) => rating.owner === currentUser?.username);
 
     return (
         <div>
@@ -154,7 +167,7 @@ const Rating = ({ gameId }) => {
                     <p>No ratings yet for this game.</p>
                 )}
             </div>
-            {currentUser && (
+            {currentUser && !userHasRated && (
                 <form onSubmit={handleSubmitRating}>
                     <h5>Submit your rating:</h5>
                     <DiceRating value={userRating} onChange={setUserRating} />
