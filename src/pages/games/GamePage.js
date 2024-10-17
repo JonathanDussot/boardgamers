@@ -42,11 +42,12 @@ function GamePage() {
         handleMount()
     }, [id]);
 
+    const gameTitle = game.results.length > 0 ? game.results[0].title : "Game Title";
 
     return (
         <Row className="h-100 justify-content-center">
             <Col className="py-2 p-0 p-lg-2" lg={8}>
-                <h3 className="py-4">BoardGamers, welcome!</h3>
+                <h2 className="py-4">BoardGamers, welcome to {gameTitle}!</h2>
                 <Game {...game.results[0]} setGames={setGame} gamePage />
                 <Container className={appStyles.Content}>
                     <div className={appStyles.Divider}></div>
