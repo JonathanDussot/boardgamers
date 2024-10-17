@@ -52,6 +52,8 @@ function GamePage() {
                 <Container className={appStyles.Content}>
                     <div className={appStyles.Divider}></div>
                     <Rating gameId={id} />
+                    <hr />
+                    <hr />
                     {currentUser ? (
                         <ReviewCreateForm
                             profile_id={currentUser.profile_id}
