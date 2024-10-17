@@ -144,6 +144,9 @@ const Game = (props) => {
           <i className="far fa-comments" />
         </Link>
         {reviews_count}
+        <Link to={`/games/${id}`}>
+          <i className="fa-solid fa-ranking-star" />
+        </Link>
       </div>
     </Card.Body>
   </Card>
