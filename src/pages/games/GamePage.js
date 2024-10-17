@@ -44,9 +44,9 @@ function GamePage() {
 
 
     return (
-        <Row className="h-100">
+        <Row className="h-100 justify-content-center">
             <Col className="py-2 p-0 p-lg-2" lg={8}>
-                <p>Popular profiles for mobile</p>
+                <h3 className="py-4">BoardGamers, welcome!</h3>
                 <Game {...game.results[0]} setGames={setGame} gamePage />
                 <Container className={appStyles.Content}>
                     <div className={appStyles.Divider}></div>
@@ -83,9 +83,6 @@ function GamePage() {
                         <span>No reviews...yet</span>
                     )}
                 </Container>
-            </Col>
-            <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-                Popular profiles for desktop
             </Col>
         </Row>
     );
