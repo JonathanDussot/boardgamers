@@ -97,7 +97,7 @@ const Game = (props) => {
       </Media>
     </Card.Body>
     <Link to={`/games/${id}`}>
-      <Card.Img src={image} alt={title} height={400} width={400}/>
+      <Card.Img src={image} alt={title} height={540}/>
     </Link>
     <Card.Body>
       {title && <Card.Title className="text-center bold">{title}</Card.Title>}
