@@ -29,6 +29,8 @@ const Game = (props) => {
     updated_at,
     gamePage,
     setGames,
+    rating_count,
+    average_rating,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -97,7 +99,7 @@ const Game = (props) => {
       </Media>
     </Card.Body>
     <Link to={`/games/${id}`}>
-      <Card.Img src={image} alt={title} height={540}/>
+      <Card.Img src={image} alt={title} height={540} />
     </Link>
     <Card.Body>
       {title && <Card.Title className="text-center bold">{title}</Card.Title>}
@@ -146,6 +148,9 @@ const Game = (props) => {
         {reviews_count}
         <Link to={`/games/${id}`}>
           <i className="fa-solid fa-ranking-star" />
+          <span className={styles.Rating}>
+            {rating_count} ratings, Avg: {average_rating}
+          </span>
         </Link>
       </div>
     </Card.Body>
