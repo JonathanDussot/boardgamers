@@ -95,16 +95,17 @@ const Rating = ({ gameId }) => {
     const handleDeleteRating = async (ratingId) => {
         try {
             await axiosReq.delete(`/ratings/${ratingId}/`);
-            const newRatings = ratings.filter(rating => rating.id !== ratingId)
-            setRatings(newRatings)
+            window.location.reload();
+            // const newRatings = ratings.filter(rating => rating.id !== ratingId)
+            // setRatings(newRatings)
             // setRatings((prevRatings) => prevRatings.filter((rating) => rating.id !== ratingId));
             // console.log("Ratings after delete: ", ratings)
 
             // Update average rating
-            const total = newRatings.reduce((sum, rating) => sum + rating.rating, 0);
-            const newAvg = total / (ratings.length - 1); // Adjust for deleted rating
+            // const total = newRatings.reduce((sum, rating) => sum + rating.rating, 0);
+            // const newAvg = total / (ratings.length - 1); // Adjust for deleted rating
             // const newAvg = total / ratings.length;
-            setAverageRating(newAvg.toFixed(1));
+            // setAverageRating(newAvg.toFixed(1));
         } catch (err) {
             console.error('Error deleting rating:', err);
         }
@@ -116,7 +117,7 @@ const Rating = ({ gameId }) => {
     return (
         <div>
             <h4>
-                Average Rating: {ratings.length > 0 ? `${averageRating}/6` : 'No ratings yet'}
+                Average Rating: {ratings.length > 0 ? `${isNaN(averageRating) ? 0 : averageRating}/6` : 'No ratings yet'}
             </h4>
             <div>
                 {ratings.length > 0 ? (
