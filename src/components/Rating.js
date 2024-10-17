@@ -138,9 +138,9 @@ const Rating = ({ gameId }) => {
                         {ratings.map((rating) => (
                             <li key={rating.id}>
                                 <img
+                                    className={`${styles.RatingImg}`}
                                     src={rating.profile_image}
                                     alt={`${rating.owner}'s profile`}
-                                    style={{ width: '30px', height: '30px', borderRadius: '50%', marginRight: '10px' }}  // Styling the image
                                 />
                                 {rating.owner}: {rating.rating}/6
                                 {rating.owner === currentUser?.username && (

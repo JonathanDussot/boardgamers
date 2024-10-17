@@ -113,6 +113,7 @@ const Game = (props) => {
       )}
       {genre_filter && <Card.Text className="text-right" style={{ marginBottom: '0.25rem' }}>Genre: {genre_filter}</Card.Text>}
       <hr />
+      <hr />
       {description && <Card.Text>{description}</Card.Text>}
       <div className={styles.GameBar}>
         {is_owner ? (
