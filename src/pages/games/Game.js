@@ -149,7 +149,7 @@ const Game = (props) => {
         <Link to={`/games/${id}`}>
           <i className="fa-solid fa-ranking-star" />
           <span className={styles.Rating}>
-            {rating_count} ratings, Avg: {average_rating}
+            Avg: {average_rating} ({rating_count} ratings)
           </span>
         </Link>
       </div>
