@@ -10,6 +10,7 @@ import GamePage from "./pages/games/GamePage";
 import GamesPage from "./pages/games/GamesPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import GameEditForm from "./pages/games/GameEditForm";
+import ProfilePage from "./pages/profiles/ProfilePage";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -42,6 +43,7 @@ function App() {
           <Route exact path="/games/create" render={() => <GameCreateForm />} />
           <Route exact path="/games/:id" render={() => <GamePage />} />
           <Route exact path="/games/:id/edit" render={() => <GameEditForm />} />
+          <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>
