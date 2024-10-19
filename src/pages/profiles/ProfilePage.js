@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+
 import styles from '../../styles/ProfilePage.module.css';
+import appStyles from '../../App.module.css'
 import btnStyles from '../../styles/Button.module.css';
+
 import { useParams } from 'react-router-dom';
 import { axiosReq } from '../../api/axiosDefaults';
 import { Image } from 'react-bootstrap';
@@ -23,7 +26,7 @@ const ProfilePage = () => {
   }, [id]);
 
   return (
-    <div className={styles.ProfilePage}>
+    <div className={appStyles.Content}>
       {profileData ? (
         <div className={styles.ProfileContainer}>
           <Image src={profileData.image} roundedCircle className={styles.ProfileImage} />
