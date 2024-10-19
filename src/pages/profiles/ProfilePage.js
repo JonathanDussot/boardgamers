@@ -29,7 +29,7 @@ const ProfilePage = () => {
   return (
     <div className={appStyles.Content}>
       {profileData ? (
-        <Card className="mb-4" style={{ padding: '10px', borderRadius: '10px' }}>
+        <Card className="mb-4" style={{ padding: '5px', borderRadius: '10px' }}>
           <Row>
             {/* Use Col for layout of images */}
             <Col xs={4} className="d-flex justify-content-center align-items-center">
@@ -45,13 +45,13 @@ const ProfilePage = () => {
           </Row>
           <Card.Body className="text-center">
             <Card.Title className={`${styles.ProfileName} mb-3`}>{profileData.owner}</Card.Title>
-            <Card.Text className="text-muted">
+            <Card.Text className={`${styles.ProfileInfo} text-muted`}>
               <strong>Favourite Game:</strong> {profileData.favourite_game || 'N/A'}
             </Card.Text>
-            <Card.Text className="text-muted">
+            <Card.Text className={`${styles.ProfileInfo} text-muted`}>
               <strong>Member since:</strong> {new Date(profileData.created_at).toLocaleDateString()}
             </Card.Text>
-            <Card.Text className="text-muted">
+            <Card.Text className={`${styles.ProfileInfo} text-muted`}>
               <strong>Games Posted:</strong> {profileData.games_count}
             </Card.Text>
             <button className={`${btnStyles.Button} ${btnStyles.EditButton} mt-3`}>
