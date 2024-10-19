@@ -30,12 +30,12 @@ const ProfilePage = () => {
     <div className={appStyles.Content}>
       {profileData ? (
         <Card className="mb-4" style={{ padding: '5px', borderRadius: '10px' }}>
-          <Row>
+          <Row className="text-center">
             {/* Use Col for layout of images */}
-            <Col xs={4} className="d-flex justify-content-center align-items-center">
+            <Col xs={12} md={4} className="d-flex justify-content-center align-items-center mb-2 mb-md-0">
               <Image src={logo} alt="logo" height="75" />
             </Col>
-            <Col xs={4} className="d-flex justify-content-center align-items-center">
+            <Col xs={12} md={4} className="d-flex justify-content-center align-items-center">
               <Image
                 src={profileData.image}
                 roundedCircle
