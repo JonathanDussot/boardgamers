@@ -3,14 +3,20 @@ import NavBar from "./components/NavBar";
 import Container from "react-bootstrap/Container";
 import { Route, Switch } from "react-router-dom";
 import "./api/axiosDefaults";
+
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import GameCreateForm from "./pages/games/GameCreateForm";
 import GamePage from "./pages/games/GamePage";
 import GamesPage from "./pages/games/GamesPage";
+
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import GameEditForm from "./pages/games/GameEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
+
+import UsernameForm from "./pages/profiles/UsernameForm";
+import UserPasswordForm from "./pages/profiles/UserPasswordForm";
+import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 
 function App() {
   const currentUser = useCurrentUser();
