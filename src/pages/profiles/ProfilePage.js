@@ -7,6 +7,7 @@ import appStyles from '../../App.module.css';
 import { useParams } from 'react-router-dom';
 import { axiosReq } from '../../api/axiosDefaults';
 import { Image, Card } from 'react-bootstrap';
+import { ProfileEditDropdown } from "../../components/MoreDropdown";
 
 const ProfilePage = () => {
   const { id } = useParams();
@@ -42,6 +43,7 @@ const ProfilePage = () => {
               />
             </Col>
           </Row>
+          {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
           <Card.Body className="text-center">
             <Card.Title className={`${styles.ProfileName} mb-3`}>{profileData.owner}</Card.Title>
             <Card.Text className={`${styles.ProfileInfo} text-muted`}>
