@@ -30,7 +30,8 @@ const ProfilePage = () => {
           <h2 className={styles.ProfileName}>{profileData.owner}</h2>
           <p><strong>Name:</strong> {profileData.name || 'N/A'}</p>
           <p><strong>Favourite Game:</strong> {profileData.favourite_game || 'N/A'}</p>
-          <p><strong>Member since:</strong> {new Date(profileData.created_at).toLocaleDateString()}</p>
+          <p><strong>Member since:</strong> {new Date(profileData.created_at).toLocaleDateString()}</p>          
+          <p><strong>Games Posted:</strong> {profileData.games_count}</p>
           <button className={`${btnStyles.Button} ${btnStyles.EditButton}`}>
             Edit Profile
           </button>
