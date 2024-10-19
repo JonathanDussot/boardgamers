@@ -19,8 +19,10 @@ const NavBar = () => {
 
   const handleSignOut = async () => {
     try {
+      console.log("Current User:", currentUser);
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
+      console.log("Current User:", currentUser);
     } catch (err) {
       console.log(err);
     }
@@ -32,7 +34,7 @@ const NavBar = () => {
       activeClassName={styles.Active}
       to="/games/create"
     >
-      <i className="far fa-plus-square"></i>Add post
+      <i className="far fa-plus-square"></i>Add Game Post
     </NavLink>
   );
   const loggedInIcons = (
