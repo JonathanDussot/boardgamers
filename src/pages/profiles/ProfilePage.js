@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col"; // Import Col for layout
+import { Row, Col, Image, Card } from 'react-bootstrap';
 import logo from "../../assets/logo.png";
 import styles from '../../styles/ProfilePage.module.css';
 import appStyles from '../../App.module.css';
 import { useParams } from 'react-router-dom';
 import { axiosReq } from '../../api/axiosDefaults';
-import { Image, Card } from 'react-bootstrap';
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
 
 const ProfilePage = () => {
@@ -31,7 +29,6 @@ const ProfilePage = () => {
       {profileData ? (
         <Card className="mb-4" style={{ padding: '5px', borderRadius: '10px' }}>
           <Row className="text-center">
-            {/* Use Col for layout of images */}
             <Col xs={12} md={4} className="d-flex justify-content-center align-items-center mb-2 mb-md-0">
               <Image src={logo} alt="logo" height="75" />
             </Col>
