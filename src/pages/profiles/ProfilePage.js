@@ -47,6 +47,9 @@ const ProfilePage = () => {
           <Card.Body className="text-center">
             <Card.Title className={`${styles.ProfileName} mb-3`}>{profileData.owner}</Card.Title>
             <Card.Text className={`${styles.ProfileInfo} text-muted`}>
+              <strong>Name:</strong> {profileData.name || 'N/A'}
+            </Card.Text>
+            <Card.Text className={`${styles.ProfileInfo} text-muted`}>
               <strong>Favourite Game:</strong> {profileData.favourite_game || 'N/A'}
             </Card.Text>
             <Card.Text className={`${styles.ProfileInfo} text-muted`}>
