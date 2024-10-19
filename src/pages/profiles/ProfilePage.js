@@ -43,7 +43,7 @@ const ProfilePage = () => {
               />
             </Col>
           </Row>
-          {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
+          {profileData?.is_owner && <ProfileEditDropdown id={profileData?.id} />}
           <Card.Body className="text-center">
             <Card.Title className={`${styles.ProfileName} mb-3`}>{profileData.owner}</Card.Title>
             <Card.Text className={`${styles.ProfileInfo} text-muted`}>
