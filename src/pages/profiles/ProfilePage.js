@@ -6,7 +6,7 @@ import { axiosReq } from '../../api/axiosDefaults';
 import { Image } from 'react-bootstrap';
 
 const ProfilePage = () => {
-  const { id } = useParams();  // Assuming the profile ID is passed in the URL
+  const { id } = useParams();
   const [profileData, setProfileData] = useState(null);
 
   useEffect(() => {
