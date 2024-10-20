@@ -102,7 +102,9 @@ const Game = (props) => {
       <Card.Img src={image} alt={title} height={540} />
     </Link>
     <Card.Body>
-      {title && <Card.Title className="text-center bold">{title}</Card.Title>}
+      <Link to={`/games/${id}`}>
+        {title && <Card.Title className="text-center bold">{title}</Card.Title>}
+      </Link>
       {designer && <Card.Text className="text-left" style={{ marginBottom: '0.25rem' }}>Designer: {designer}</Card.Text>}
       {artist && <Card.Text className="text-left" style={{ marginBottom: '0.25rem' }}>Artist: {artist}</Card.Text>}
       {publisher && <Card.Text className="text-left" style={{ marginBottom: '0.25rem' }}>Publisher: {publisher}</Card.Text>}
