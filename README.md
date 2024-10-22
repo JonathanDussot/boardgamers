@@ -69,31 +69,47 @@ Not all stories have been implemented. Some have been left for future implementa
 These can be found in our [API's README.md](https://github.com/JonathanDussot/drf-api-bg/blob/main/README.md#user-stories)
 
 ### Site User stories:
+- Here is a list of all my user stories which can be found in my frontend [project](https://github.com/users/JonathanDussot/projects/7/views/1) which employs the Agile methodology approach in an organized manner, each with their labels as per MoSCoW prioritization of tasks. ![kanbanboard](src/images/kanban-frontend-board.png)
+
 #### Home:
-1. I can **leave comments on a post** so that **I can be involved in the conversation.**.
- - Story points: 3
-2. I can **click on the Travel Resources section** so that **I can view the information provided**.
- - Story points: 1
-3. I can **modify or delete my comment on a post** so that **I can be involved in the conversation**.
- - Story points: 2
-4. I can **post a message to the Site Admin with my details** so that **I can propose an idea for collaboration.**.
- - Story points: 2
-5. I can **register an account** so that **I can comment on a post.**.
- - Story points: 3
-6. I can **view comments on an individual post** so that **I can read the conversation.**.
- - Story points: 2
-7. I can **can click on the about link** so that **I can read information about the site and site admin.**.
- - Story points: 1
-8. I can **click on a post** so that **I can read the full text.**.
- - Story points: 1
-9. I can **view a paginated list of posts** so that **I can select which post I want to view.**.
- - Story points: 3
-10. I can **enter my email** so that **I am subscribed to the newsletter service.**.
- - Story points: 3
-11. I can **update my email** so that **I am subscribed to the newsletter service with the correct email address.**.
- - Story points: 4
-12. I can **delete my email** so that **I am unsubscribed to the newsletter service.**.
- - Story points: 4
+- [x] As a user I can enter key words or a user name in the search field so that I can filter my viewed games list to only entries of that particular keyword.
+- [x] As a user I can stay logged in until I choose to logout so that my user experience is not compromised.
+- [x] As a user I can scroll down so that I can load more list items to view instead of switching pages.
+- [x] As a user I can view all games on the home page.
+- [x] As a signed in user I can sign out so that I can close my account and return to home page.
+
+#### Authentication:
+- [x] As a user I can determine I'm logged in or if a log in is necessary.
+- [x] As a user I can sign in so that I can use all user features from my account.
+- [x] As a new user I can sign up so that I can create an account as a user.
+
+#### Games posts:
+- [x] As a logged in user I can delete a post I own so that it is removed altogether.
+- [x] As a logged in user I can edit a game post I own so that I can update the post details.
+- [x] As a logged in user I can Create a new Game post so that I can add a game to the hme page for other users to see.
+
+#### Game Reviews:
+- [x] As a logged in user I can delete a review I own so that it is removed altogether.
+- [x] As a logged in user I can edit a review I own so that I can update the information within my review.
+- [x] As a logged in user I can create a review so that other users and I can interact.
+- [x] As a user I can click on a game and view its reviews.
+
+#### Likes:
+- [x] As a logged in user I can view a list from my NavBar of all the Games I have liked.
+- [x] As a logged in user I can like and unlike a game so that express my interest in others' posts.
+
+#### Ratings:
+- [x] As a logged in user I can delete a game rating I own so that it is removed from game post's existing ratings.
+- [x] As a logged in user I can edit my game rating so that I can update my rating for others to see.
+- [x] As a logged in user I can give a game a rating so that I can interact with other users' game posts.
+
+#### Navigation bar:
+- [x] As a user I can always view the NavBar so that I can navigate between pages.
+
+#### Profiles:
+- [x] As a logged in user I can change my username or password for access purposes.
+- [x] As a logged in user I can view and edit my own profile image and details so that other users can see when visiting my profile.
+- [x] As a user I can view other users' profiles so that I can see their profile information.
 
 ## Design
 
