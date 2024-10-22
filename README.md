@@ -1,70 +1,502 @@
-# Getting Started with Create React App
+# BoardGamers
+BoardGamers is a site that has been created solely with the purpose of sharing the passion of playing boardgames. The site allows users to create posts with some of their favourite games, some of which may be very common around the world, and others which could interest users depending on their specific likes and/or requirements.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Site view across devices](src/images/amiresponsive-pp5.png)
 
-## Available Scripts
+The live link for "BoardGamers" can be found [HERE](https://boardgamers-ci-364d7fb71032.herokuapp.com/)
 
-In the project directory, you can run:
+You can also view the backend API along with its README.md [HERE](https://github.com/JonathanDussot/drf-api-bg)
 
-### `npm start`
+## Table of Contents
++ [UX](#ux "UX")
+  + [Site Purpose](#site-purpose "Site Purpose")
+  + [Site Goal](#site-goal "Site Goal")
+  + [Audience](#audience "Audience")
+  + [Communication](#communication "Communication")
+  + [Existing User Goals](#existing-user-goals "Existing User Goals")
+  + [New User Goals](#new-user-goals "New User Goals")
++ [User Stories](#user-stories "User Stories")
+  + [Admin stories](#admin-stories "Admin stories")
+  + [Site User stories](#site-user-stories "Site User stories")
++ [Design](#design "Design")
+  + [Colour Scheme](#colour-scheme "Colour Scheme")
+  + [Typography](#typography "Typography")
+  + [Imagery](#imagery "Imagery")
++ [Features](#features "Features")
+  + [Existing Features](#existing-features "Existing Features")
+  + [C.R.U.D](#crud "C.R.U.D")
++ [Testing](#testing "Testing")
+  + [Validator Testing](#validator-testing "Validator Testing")
+  + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
++ [Technologies Used](#technologies-used "Technologies Used")
+  + [Main Languages Used](#main-languages-used "Main Languages Used")
+  + [Frameworks, Libraries & Programs Used](#frameworks-libraries-programs-used "Frameworks, Libraries & Programs Used")
++ [Deployment](#deployment "Deployment")
++ [Credits](#credits "Credits")
+  + [Content](#content "Content")
+  + [Media](#media "Media")
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## UX
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Site Purpose:
+The aim of this site is to bring all *board gamers* together from around the world.  It is still a rather niche market, yet it has been gaining plenty of terrain in recent years with its appealing designs and fun, dynamic experiences capable of uniting an entire family round the table on a friday night in this era of digital dominance.  The *BoardGamers* site alienates no-one as its diverse categories of gaming are endless and bound to attract users regardless of devotion, age or table space.  User can also leave reviews on games others have posted, along with their personal ratings.  They can also like game posts and have instant access to them through the 'Liked' tab.
 
-### `npm test`
+### Site Goal:
+To propagate an extremely healthy and enjoyable hobby with the family as entire communities are now constantly turning to board gaming in order to teach our young generation that there is much more fun to be had in company than in a virtual void, not to mention the many people who have developed a passion throughout their lives and just want to share this with their friends and community. This site will encourage just that.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Audience:
+Naturally it could be assumed that only the 'gaming nerds' may want to reach and enter the gates of our website, but seeing how user-friendly and interactive we have designed our site, it is a warm, welcoming environment for those who wish to take up the hobby or simply indulge themselves with the details.
 
-### `npm run build`
+### Communication:
+users are provided with the possibility to view eachother's profiles and, in the future, interact with one another.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Existing User Goals:
+The joy of never feeling old, as we are continuously given new, innovative models of gaming to share and recommend within the community of *BoardGamers*.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### New User Goals:
+To feel welcomed by a never-dying culture with a vast variety of gaming genres and complexities to serve as endless means to suit their many needs.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Future Goals:
+- Currently there is a file (CurrentUserContext.js) which will in the future provide a scoreboard of sorts with the top games based on users' average ratings ranked from highest to lowest.
+- Users may also benefit from an online forum to discuss trending topics more interactively among the community members.
+- An option to inform the community on events held around the world to promote new products and get the *BoardGamers* community more involved in what's to come. 
 
-### `npm run eject`
+## User Stories
+Not all stories have been implemented. Some have been left for future implementations as the site grows and expands.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Admin stories:
+#### As an admin:
+These can be found in our [API's README.md](https://github.com/JonathanDussot/drf-api-bg/blob/main/README.md#user-stories)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Site User stories:
+#### Home:
+1. I can **leave comments on a post** so that **I can be involved in the conversation.**.
+ - Story points: 3
+2. I can **click on the Travel Resources section** so that **I can view the information provided**.
+ - Story points: 1
+3. I can **modify or delete my comment on a post** so that **I can be involved in the conversation**.
+ - Story points: 2
+4. I can **post a message to the Site Admin with my details** so that **I can propose an idea for collaboration.**.
+ - Story points: 2
+5. I can **register an account** so that **I can comment on a post.**.
+ - Story points: 3
+6. I can **view comments on an individual post** so that **I can read the conversation.**.
+ - Story points: 2
+7. I can **can click on the about link** so that **I can read information about the site and site admin.**.
+ - Story points: 1
+8. I can **click on a post** so that **I can read the full text.**.
+ - Story points: 1
+9. I can **view a paginated list of posts** so that **I can select which post I want to view.**.
+ - Story points: 3
+10. I can **enter my email** so that **I am subscribed to the newsletter service.**.
+ - Story points: 3
+11. I can **update my email** so that **I am subscribed to the newsletter service with the correct email address.**.
+ - Story points: 4
+12. I can **delete my email** so that **I am unsubscribed to the newsletter service.**.
+ - Story points: 4
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Design
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Wireframes:
 
-## Learn More
+#### Home Page: 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Home Page](static/images-readme/wireframe-homepage.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Post Details Page:
 
-### Code Splitting
+![Post Details Page](static/images-readme/wireframe-postdetail-page.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### About Page:
 
-### Analyzing the Bundle Size
+![About Page](static/images-readme/wireframe-aboutpage.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Resources Page:
 
-### Making a Progressive Web App
+![Resources Page](static/images-readme/wireframe-resourcespage.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Newsletter Page:
 
-### Advanced Configuration
+![Newsletter Page](static/images-readme/wireframe-newsletter-page.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Database Schema
 
-### Deployment
+![Database Schema](static/images-readme/hidden-gems-erd-diagram.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Colour Scheme:
 
-### `npm run build` fails to minify
+![Colour Palette](static/images-readme/colour-scheme.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- #fff - is typically used as my background colour and also text colour in the case of there being a dark-coloured background.
+- #212529 - is the text colour used throughout the webpage when there is a light-coloured background.
+- #188181 - to resemble some familiarity with the blue colour within the logo, a different shade was actually used to help with the colour contrast issues.
+- #F06814 - to resemble the orange colour within the logo and give a more familiar feeling throughout the webpage.
+- #445261 - is used in the mastheads within the post details html pages to contrast the image colours.
+
+### Typography:
+All fonts were obtained from the Google Fonts library. I chose the following fonts for the page:
+1. Poppins: used for titles and Navbar elements such as the nav-items and text-muted phrase.
+2. Open Sans: Typically used for the body text of the webpage.
+
+### Imagery:
+- All images have been named in the credit section, most of which are photos of places, whereas the others related to travel are from free photo sites.
+
+## Features
+
+### Existing Features:
+
+#### Home Page:
+
+![Home page](static/images-readme/features-homepage.png)
+
+#### Navigation Bar:
+
+##### Desktop:
+
+![Navbar desktop](static/images-readme/features-desktop-navbar.png)
+
+##### Mobile:
+
+![Navbar mobile](static/images-readme/features-mobile-navbar.png)
+
+#### Paginated features:
+- Leads user to next/ previous page(s) assuming there's more posts than the page's limit.
+![paginated](static/images-readme/features-paginated.png)
+
+#### About Page:
+
+![About page](static/images-readme/features-aboutpage.png)
+
+#### Collaboration Form on About Page:
+
+![Collaboration form](static/images-readme/features-collaboration-request.png)
+
+#### Travel Resources Page:
+
+![Resources Page](static/images-readme/features-resourcespage.png)
+
+#### Post Details Page:
+
+![Post Details Page](static/images-readme/features-postdetails.png)
+
+#### Like button feature:
+
+![Like button feature](static/images-readme/features-like-system.png)
+
+#### Post Details Comment Section:
+
+![Post Details Comment Section](static/images-readme/features-comment-system.png)
+
+#### Log in, Log out & Sign up:
+
+##### Login:
+
+![Login](static/images-readme/features-signin-page.png)
+
+##### Logout:
+
+![Logout](static/images-readme/features-signout-page.png)
+
+##### Sign-up:
+
+![Sign-up](static/images-readme/features-signup-page.png)
+
+#### Footer:
+
+![Footer](static/images-readme/features-footer.png)
+
+### C.R.U.D:
+
+#### Newsletter Subscription Page - Create:
+- This gives users the option to sign up for the newsletter by entering their email before being alerted on the success of their subsription.
+- It is only visible to users who are signed in.
+![CRUD - create button](static/images-readme/features-subscription-page.png)
+
+#### Newsletter Subscription Page - Read:
+- User is alerted as to the successful subsription...
+![CRUD - read](static/images-readme/features-subscription-alert.png)
+- ...before being led to the email-list page with a display of the email(s) they have subscribed on their account alone.
+![CRUD - read(2)](static/images-readme/features-editsubscription-page.png)
+
+#### Newsletter Subscription Page - Update:
+- The user is given the option to edit the email address on their account alone.
+![CRUD - update](static/images-readme/features-updatesubscription-page.png)
+
+#### Newsletter Subscription Page - Delete:
+- The user is given the option to delete an email(s) and unscubscribe on their account alone.
+![CRUD - delete](static/images-readme/features-deletesubscription-page.png)
+
+### Features Left to Implement
+- System to send out newsletters.
+- newsletter contests.
+- flight reservation section.
+- GPS map showing location.
+- Hotels/ Other accomodation around the location using GPS.
+- Password reset.
+- Social media sign-in.
+
+## Testing
+
+### Validator Testing
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** |
+| ----------------------------- | ----------------------- | --------------------------- | ---------- |
+| gems - settings.py | PEP8 validator | [No issues found](static/images-readme/pep8-validator-python.png) | ✅ |
+| gems - urls.py | PEP8 validator | No issues found | ✅ |
+| blog app - forms.py | PEP8 validator | No issues found | ✅ |
+| blog app - models.py | PEP8 validator | No issues found | ✅ |
+| blog app - views.py | PEP8 validator | No issues found | ✅ |
+| blog app - urls.py | PEP8 validator | No issues found | ✅ |
+| blog app - admin.py | PEP8 validator | No issues found | ✅ |
+| about app - forms.py | PEP8 validator | No issues found | ✅ |
+| about app - models.py | PEP8 validator | No issues found | ✅ |
+| about app - views.py | PEP8 validator | No issues found | ✅ |
+| about app - urls.py | PEP8 validator | No issues found | ✅ |
+| about app - admin.py | PEP8 validator | No issues found | ✅ |
+| newsletter app - forms.py | PEP8 validator | No issues found | ✅ |
+| newsletter app - models.py | PEP8 validator | No issues found | ✅ |
+| newsletter app - views.py | PEP8 validator | No issues found | ✅ |
+| newsletter app - urls.py | PEP8 validator | No issues found | ✅ |
+| newsletter app - admin.py | PEP8 validator | No issues found | ✅ |
+| resources app - forms.py | PEP8 validator | No issues found | ✅ |
+| resources app - models.py | PEP8 validator | No issues found | ✅ |
+| resources app - views.py | PEP8 validator | No issues found | ✅ |
+| resources app - urls.py | PEP8 validator | No issues found | ✅ |
+| resources app - admin.py | PEP8 validator | No issues found | ✅ |
+| style.css | [W3C - Jigsaw](https://jigsaw.w3.org/css-validator/) validator | [No issues found](static/images-readme/w3c-validator-css.png) | ✅ |
+| Home page - html | [W3C](https://validator.w3.org/) validator - source code | [No issues found](static/images-readme/w3c-validator-html.png) | ✅ |
+| About page - html | W3C validator - source code | No issues found | ✅ |
+| Post Details page - html | W3C validator - source code | No issues found | ✅ |
+| Resources page - html | W3C validator - source code | No issues found | ✅ |
+| Newsletter page - html | W3C validator - source code | No issues found | ✅ |
+| Sign-in page - html | W3C validator - source code | No issues found | ✅ |
+| Home page - html | lighthouse | [Acceptable scores](static/images-readme/lighthouse.png) | ✅ |
+| About page - html | lighthouse | Acceptable scores | ✅ |
+| Post-Details page - html | lighthouse | Acceptable scores | ✅ |
+| Resources page - html | lighthouse | Acceptable scores | ✅ |
+| Newsletter page - html | lighthouse | Acceptable scores | ✅ |
+| Sign-in page - html | lighthouse | Acceptable scores | ✅ |
+| WAVE results | WAVE | [Acceptable scores](static/images-readme/wave.png) | ✅ |
+| Microsoft Edge browser | Launch site | Site opens without issue | ✅ |
+| Google Chrome browser | Launch site | Site opens without issue | ✅ |
+
+### Responsiveness testing
+
+| **TEST**                      | **ACTION**              | **EXPECTATION**             | **RESULT** |
+| ----------------------------- | ----------------------- | --------------------------- | ---------- |
+| Home page - responsiveness    | Size site down to 320px | all elements stay on screen | ✅         |
+| Home page - responsiveness    | Size site up to 1920px  | all elements stay on screen | ✅         |
+| About page - responsiveness   | Size site down to 320px | all elements stay on screen | ✅         |
+| About page - responsiveness   | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Post-Details page - responsiveness  | Size site down to 320px | all elements stay on screen | ✅         |
+| Post-Details page - responsiveness  | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Resources page - responsiveness    | Size site down to 320px | all elements stay on screen | ✅         |
+| Resources page - responsiveness    | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Newsletter page - responsiveness   | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Newsletter page - responsiveness   | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Sign-in page - responsiveness | Size site down to 320px | all elements stay on screen | ✅         |
+| Sign-in page - responsiveness | Size site up to 1920px  | all elements stay on screen | ✅         |
+
+### C.R.U.D. testing
+
+| **TEST**          | **ACTION**             | **EXPECTATION**          | **RESULT** |
+| ----------------- | ---------------------- | ------------------------ | ---------- |
+| Newsletter subscription - Create     | Add new instance to DB | Instance created         | ✅         |
+| Newsletter subscription - Read       | Retrieve all instances | Instances visible in UI  | ✅         |
+| Newsletter subscription - Update     | Modify an instance     | Mods saved & visible     | ✅         |
+| Newsletter subscription - Delete     | Delete an instance     | Instance removed from UI | ✅         |
+| Comments - Create | Add new instance to DB | Instance created         | ✅         |
+| Comments - Read   | Retrieve all instances | Instances visible in UI  | ✅         |
+| Comments - Update | Add new instance to DB | Mods saved & visible     | ✅         |
+| Comments - Delete   | Retrieve all instances | Instance removed from UI | ✅         |
+| Like - Create | Add new instance to DB | Instance created         | ✅         |
+| Like - Delete | Delete an instance     | Instance removed from UI | ✅         |
+
+### FEATURES
+
+| **TEST**                      | **ACTION**             | **EXPECTATION**                                           | **RESULT** |
+| ----------------------------- | ---------------------- | --------------------------------------------------------- | ---------- |
+| Navigation bar                | Click on nav link      | user routed to correct page                               | ✅         |
+| Footer links                  | Click on footer links  | user routed to new browser tab                            | ✅         |
+| Like button                   | Click "like"           | Post liked/unliked accordingly                            | ✅         |
+| Comment section                   | Written empty message           | does not submit, prompts to write a message                            | ✅         |
+| Comment section                   | Write message and submit           | user informed on pending approval                            | ✅         |
+| Edit button                   | Click edit button      | user allowed to edit comment only if previously approved                             | ✅         |
+| Delete button                 | Click delete button    | user allowed to delete comment only if previously approved                                | ✅         |
+| Collaboration form                | Submit form    | user alerted on successful form                                | ✅         |
+| External links in Resources                | Click link             | User routed to appropriate webpage                           | ✅         |
+| Subscription                | enter invalid email             | User prompted to write a valid email                           | ✅         |
+| Subscription CRUD buttons                | Click buttons            | User routed to appropriate page and UI updated                    | ✅         |
+| Login                         | User logs in           | UI updates & user is logged in                            | ✅         |
+| Sign up                       | User signs up          | new account created for the user                          | ✅         |
+| Logout                        | User clicks logout     | UI updates, user is logged out, user cannot create a post | ✅         |
+
+### BUG TESTING:
+1. Heroku logs--tail error when deploying to Heroku:
+ - Added correctly-written web: gunicorn gems.wsgi to ProcFile to link it correctly.
+
+2. 'unexpected chunk number 1 (expected 0)' error:
+ - This was caused be corrupted Data upon using loaddata with json.file according to Tutor Support.
+ - Uncommented sqlite database and commented out external database to temporarily work on project before eventually providing a solution (mentioned in bug #3)
+
+3. Opening new external Database:
+ - Did pip install and pip freeze with all requirements, created env.py file, added new DB URL and secret key, collectstatic, updated CSRF, did makemigrations and migrate command and yet page would not load correctly.
+ - The cloudinary URL was missing within the env.py, this allowed the page to load correctly.
+
+4. CSS styles would not load:
+ - Upon using terminal command to copy staticfiles into a template folder, accidently created and nested everything within an additional templates folder so url path did not connect.
+ - Moved everything out to the correct template folder and css styles were loading correctly.
+
+5. Admin interface content lacked RichText Editor for content fields in resources app:
+ - summernote_fields was not correctly linked to content containers within the admin.py file.
+
+6. Likes generated an error:
+ - within the blog's models.py the model's related name for the like button clashed with the comment section, I changed the name so code could correctly distinguish model and this fixed the bug.
+
+7. Validator error message <o:p>:
+ - This was due to my population of the content fields having used my microsoft word to draft the tet before adding them to the admin interface, could not be seen in my code.
+ - Manually accessed and edited code from Admin interface and deleted the tags.
+
+8. Page would break when screen size was below 768px and only provide images:
+ - Deleted 'flex: no-wrap' to fix this issue and correctly display text with the images so users can access post details for each post.
+
+9. Editing a comment while awaiting approval:
+ - Page would crash is user were to click on the edit button before comment had been approved.
+ - Fixed the issue by removing the edit button for comments awaiting approval.
+
+10. Navbar overflow:
+ - Navbar displayed overflow off page between 1150px and 990px on all pages.
+ - Reduced the logo size, nav-link size and text-muted size so elements would not cause navbar to overflow before collapsing as media response styles take effect.
+
+11. Like button with a reverse path error:
+ - Upon correcting some of the hyphens and underscores, the blog's urls.py path had the correct pattern, but the views.py file still had **'post-detail'** instead of **post_detail** within the reverse function call.
+
+### Unfixed Bugs
+1. Sign up form - HTML Validator errors:
+- Upon validating, I noticed [4 errors with tags](static/images-readme/signup-html-errors.png) which were nowhere to be found within my code.
+- With help from Tutor Support, we determined this was from Django's Allauth's error and that I could do nothing to fix it from my end.
+
+## Technologies Used
+### Main Languages Used
+- HTML5
+- CSS3
+- Javascript
+- Python
+- Django
+- SQL - Postgres
+
+### Frameworks, Libraries & Programs Used
+- [Google Fonts](https://fonts.google.com/) - for the font families: 
+- [Font Awesome](fontawesome.com) - for the social network icons.
+- [GitPod](https://www.gitpod.io/) - for creating html files, css stylesheet and python files.
+- [GitHub](https://github.com/) - to store my repository for submission.
+- Google Dev tools - to test and fix issues detected.
+- [Pexels](https://www.pexels.com/) to use free images for site.
+- [Free Pik](https://www.freepik.es/) to use free images for site.
+- [Balsamiq](https://balsamiq.com/) - for the wireframe mockups of my webpage.
+- [Am I Responsive?](https://ui.dev/amiresponsive) - to ensure the webpage displayed well on all devices.
+- [Tiny PNG](https://tinypng.com/) to compress images.
+- [DrawSQL](https://drawsql.app/) - for ERD mockups
+- [FreeLogoDesign](https://app.freelogodesign.org/)
+- [Colormind.io](http://colormind.io/) to generate color palette used. 
+- [cdnjs](https://cdnjs.com/libraries/bootstrap) for bootstrap.
+- Django
+- Bootstrap
+
+### Installed Packages:
+- asgiref==3.8.1
+- cloudinary==1.36.0
+- crispy-bootstrap5==0.7
+- dj-database-url==0.5.0
+- dj3-cloudinary-storage==0.0.6
+- Django==5.0.7
+- django-allauth==0.57.2
+- django-crispy-forms==2.2
+- django-summernote==0.8.20.0
+- gunicorn==20.1.0
+- oauthlib==3.2.2
+- psycopg2==2.9.9
+- PyJWT==2.8.0
+- python3-openid==3.2.0
+- requests-oauthlib==2.0.0
+- sqlparse==0.5.0
+- urllib3==1.26.19
+- whitenoise==5.3.0
+
+## Deployment
+The site was deployed to Heroku. The steps to deploy are as follows:
+- Install Django & Gunicorn:
+```pip3 install Django~=4.2.1```
+- a django project was created using:
+```django-admin startproject gems .```
+- the blog app was then created with:
+```python3 manage.py startapp blog```
+- Install gunicorn to enable deployment to Heroku:
+```pip3 install gunicorn~=20.1```
+- Creating the requirements.txt file with the following command:
+```pip3 freeze --local > requirements.txt```
+- Install Django summernote:
+```pip3 install django-summernote~=0.8.20.0```
+- Install whitenoise for Heroku to serve its own static files:
+```pip3 install whitenoise~=5.3.0```
+- Add user authentication with the following:
+```pip3 install django-allauth~=0.57.0```
+- Install Cloudinary:
+```pip3 install django-crispy-forms~=2.0 crispy-bootstrap5~=0.7```
+- Install Cloudinary:
+```pip3 install cloudinary~=1.36.0 dj3-cloudinary-storage~=0.0.6 urllib3~=1.26.15```
+- Install Cloudinary:
+```pip3 install dj3-cloudinary-storage```
+- Install Cloudinary:
+```pip3 install dj3-cloudinary-storage```
+- which was then added to the settings.py file within our project directory.
+- the changes were then migrated using:
+```python3 manage.py makemigrations``` and ```python3 manage.py migrate```
+- Collectstatic command for all static files to be deployed without issue:
+```python3 manage.py collectstatic```
+- navigated to [Heroku](www.heroku.com) & created a new app called hidden-gem-blog.
+- added the Heroku Postgres database to the Resources tab.
+- navigated to the Settings Tab, to add the following key/value pairs to the configvars:
+1. key: SECRET_KEY | value: randomkey
+2. key: PORT | value: 8000
+3. key: CLOUDINARY_URL | value: API environment variable
+4. key: DATABASE_URL | value: value supplied by Heroku
+- added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the env.py file
+- added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the settings.py file
+- add an import os statement for the env.py file.
+- added Heroku to the ALLOWED_HOSTS in settings.py
+- created the Procfile
+- pushed the project to Github
+- connected my github account to Heroku through the Deploy tab
+- connected my github project repository, and then clicked on the "Deploy" button
+- The live link for "Hidden Gems" can be found [HERE](https://hidden-gem-blog-d08378ae9ea1.herokuapp.com/)
+
+## Credits
+
+### Content
+- “I think therefore I blog” walkthrough: Assisted me hugelyfrom the start with initial steps such as commands, adding apps, designing models and the many installed apps and their purposes.  Permitted me to add on to them and expand what I already had.
+- Slack community for the vast amount of support and information available to clear doubts and help with potential bugs.
+- Tutor Support for their constant support with some of the questions or issues I had and the patience to make everything so clear and such a pleasant learning experience.
+- CI for providing us with an exclusive Gitpod which helped tremendously considering the amount of hours dedicated to putting this project together, and hopefully many more for the future implementations and improvements to be made.
+- **Location content**:
+- [Royal Alaska Movers](https://www.royalalaskanmovers.com/north-pole-alaska-visitors-guide/) provided me with the content for Santa Claus's house within the blog posts.
+- [Komoot](https://www.komoot.com/guide/1812719/attractions-in-fairbanks-north-star-borough) provided me with the content for the northern lights within the blog posts.
+- [The Culture Trip](https://theculturetrip.com/south-america/peru/articles/how-to-visit-the-nazca-lines-in-peru) provided me with the content for the Nazca Lines within the blog posts.
+- [Osprey Expeditions](https://ospreyexpeditions.com/interesting-facts-about-cano-cristales/) provided me with the content for Cano Cristales within the blog posts.
+- [Forbes](https://www.forbes.com/sites/trevornace/2016/03/02/rainbow-mountains-china-earths-paint-palette/) provided me with the content for the Rainbow mountains in China within the blog posts.
+- [Atlas Obscura](https://www.atlasobscura.com/places/santa-maria-dellisola-monastery) provided me with the content for the Monastery of Santa Maria Tropea within the blog posts.
+- [Great Blue Hole](https://greatbluehole.net/) provided me with the content for the Great Blue Hole within the blog posts.
+- [Jrailpass](https://www.jrailpass.com/blog/ashikaga-flower-park#:~:text=The%20Ashikaga%20Flower%20Park%20first,monument%20by%20the%20Tochigi%20Prefecture) provided me with the content for Ashikaga Flower Park within the blog posts.
+- [Neuschwanstein Tickets](https://neuschwansteintickets.com/) provided me with the content for Neuschwanstein Castle within the blog posts.
+- [Waitomo](https://www.waitomo.com/glowworms-and-caves/waitomo-glowworm-caves) provided me with the content for the Glow-worm Caves within the blog posts.
+- [Indonesia Travel](https://www.indonesia.travel/gb/en/destinations/bali-nusa-tenggara/flores/lake-kelimutu.html) provided me with the content for the Kelimutu lakes within the blog posts.
+- [Inside Kyoto](https://www.insidekyoto.com/arashiyama-bamboo-grove) provided me with the content for the Bamboo Groves within the blog posts.
+- [https://ukraine.ua](https://ukraine.ua/cities-places/tunnel-of-love/) provided me with the content for the tunnel of love within the blog posts.
+- [Go Visit Costa Rica](https://www.govisitcostarica.com/region/city.asp?cID=69) provided me with the content for Montaverde within the blog posts.
+- [Adventure Clues](https://www.adventureclues.com/articles/36-unknown-places-in-the-world-that-will-take-your-breath-away/) provided me with alot of information about nearly all the locations chosen and gave me some great content to use within the excerpts
+- [Adventurous Kate](https://www.adventurouskate.com/travel-resources/) for the extremely useful travelling tips used within my 'Travel Resources' section.
+
+### Media
+- [Freepik](https://www.freepik.es/search?format=search&last_filter=query&last_value=travel&query=travel) Here I got my [travel-suitcases.jpeg](static/images-readme/travel-suitcases.jpg) image.
+- [Pexels](https://www.pexels.com/photo/people-sitting-on-boat-2108832/) I used the [pexels-riverboat.jpg](static/images-readme/pexels-riverboat.jpg) image from this sit provided by a photographer named Streetwindy.
+- [Pexels](https://www.pexels.com/search/suitcase/) provided me with the [pexels-suitcase.jpg](static/images-readme/pexels-suitcase.jpg) image to use within the Resources section.
+- [Flash Packer Connect](https://www.flashpackerconnect.com/blog/visiting-cano-cristales-a-journey-to-colombias-most-colorful-river) provided me with the [cano-cristales-post.jpeg](static/images-readme/cano-cristales-post.jpeg).
