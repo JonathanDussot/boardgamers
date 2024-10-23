@@ -195,16 +195,16 @@ All the images of dice in this image were taken from [freeiconspng](https://www.
 
 #### Count features on Games Page:
 
--Displays total amount of likes, comments, and average of ratings respectively.
+-Displays total amount of likes, reviews, and average of ratings respectively.
 ![Count features](src/images/total-count.png)
 
 #### Game Page:
 
 ![Game Page](src/images/game-page.png)
 
-#### Comment feature:
+#### Review feature:
 
-![Comment feature](src/images/comments-feature.png)
+![Review feature](src/images/review-feature.png)
 
 #### Like icon feature:
 
@@ -244,31 +244,34 @@ All the images of dice in this image were taken from [freeiconspng](https://www.
 
 ### C.R.U.D:
 
-#### Newsletter Subscription Page - Create:
-- This gives users the option to sign up for the newsletter by entering their email before being alerted on the success of their subsription.
-- It is only visible to users who are signed in.
-![CRUD - created game](src/images/create-game-edit.png)
+#### Created Game Page:
+- Once the dots to the top-right corner are clicked on, they are given the option to edit or delete the game post they've created.
+- Only the owner of the Game is shown the three-dot dropdown menu with access to these options.
+![CRUD - created game edit menu](src/images/create-game-edit.png)
 
-#### Newsletter Subscription Page - Read:
-- User is alerted as to the successful subsription...
-![CRUD - Comments edit menu](src/images/comments-feature-menu.png)
+#### Review Game Page:
+- Once the dots to the top of the review are clicked on, they are given the option to edit or delete the review they've created.
+- Only the owner of the review is shown the three-dot dropdown menu with access to these options.
+![CRUD - Review edit menu](src/images/review-feature-menu.png)
 
-#### Newsletter Subscription Page - Update:
-- The user is given the option to edit the email address on their account alone.
-![CRUD - update](src/images/like-icon.png)
+#### Like Icon:
+- The user is given the option to unlike the Game post the same way they liked it to begin with, by clicking on the icon. icon will change colour.
+- Users are not given the possibility to like their own posts.
+![CRUD - Like-icon](src/images/like-icon.png)
 
-#### Newsletter Subscription Page - Delete:
-- The user is given the option to delete an email(s) and unscubscribe on their account alone.
-![CRUD - delete](static/images-readme/features-deletesubscription-page.png)
+#### Ratings Game Page:
+- User is given the option below their initial rating to edit and update their rating or delete it.
+- Only the owner of the rating is shown these options.
+- If the user chooses to update, and clicked on the 'edit' button, the six dice images will re-appear for the user to correctly update.
+![CRUD - Ratings edit menu](src/images/ratings-feature-edit.png)
+
+#### Profile Page:
+- Once the dots to the top-right corner are clicked on, they are given the option to edit their profile or change either their username or password.
+- Only the owner of the Game is shown the three-dot dropdown menu with access to these options.
+![CRUD - Profile Page edit](src/images/profile-page-edit.png)
 
 ### Features Left to Implement
-- System to send out newsletters.
-- newsletter contests.
-- flight reservation section.
-- GPS map showing location.
-- Hotels/ Other accomodation around the location using GPS.
-- Password reset.
-- Social media sign-in.
+- .
 
 ## Testing
 
