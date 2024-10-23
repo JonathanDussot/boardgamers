@@ -50,7 +50,7 @@ function GamesPage({ message, filter = "" }) {
     return (
         <Row className="h-100 justify-content-center">
             <Col className="py-2 p-0 p-lg-2" lg={8}>
-                <h2 className="py-4">Welcome, fellow BoardGamers!</h2>
+                <h2 className="py-4">Welcome fellow BoardGamers!</h2>
                 <i className={`fas fa-search ${styles.SearchIcon}`} />
                 <Form className={styles.SearchBar}
                     onSubmit={(event) => event.preventDefault()}
