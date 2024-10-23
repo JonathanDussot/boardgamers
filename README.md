@@ -155,7 +155,30 @@ All fonts were obtained from the Google Fonts library. I chose the following fon
 2. Open Sans: Typically used for the body text of the webpage.
 
 ### Imagery:
-- All images have been named in the credit section, most of which are photos of places, whereas the others related to travel are from free photo sites.
+
+#### Logo
+
+- This logo was created by me using [Free Logo Design](https://app.freelogodesign.org/signin).
+
+![logo](src/images/logo.png)
+
+#### Favicon
+
+- This favicon was selected from [iconos8](https://iconos8.es/).
+
+![Favicon](src/images/favicon.png)
+
+#### Sign up/ Sign in image
+
+This image was taken from [Pexels](https://www.pexels.com/@anete-lusina/) for my Sign In and Sign Up pages.
+
+![signinup-image](src/images/signinup-pic.jpg)
+
+#### Dice (Rating)
+
+All the images of dice in this image were taken from [freeiconspng](https://www.freeiconspng.com/images/dice-png) for my dice rating system.
+
+![Dice](src/images/dice-all.png)
 
 ## Features
 
