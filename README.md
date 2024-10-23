@@ -175,85 +175,87 @@ All the images of dice in this image were taken from [freeiconspng](https://www.
 
 #### Home Page:
 
-![Home page](static/images-readme/features-homepage.png)
+![Home page](src/images/home-page.png)
 
 #### Navigation Bar:
 
 ##### Desktop:
 
-![Navbar desktop](static/images-readme/features-desktop-navbar.png)
+![Navbar desktop](src/images/navbar.png)
 
 ##### Mobile:
 
-![Navbar mobile](static/images-readme/features-mobile-navbar.png)
+-Upon clicking on the dropdown menu, options appear:
+![Navbar mobile](src/images/navbar-smaller.png)
 
 #### Games Page:
 
-![Games page](static/images-readme/features-aboutpage.png)
+- Games appear in a list in order from latest to oldest.
+![Games page](src/images/games-page.png)
 
 #### Count features on Games Page:
 
-![Collaboration form](static/images-readme/features-collaboration-request.png)
+-Displays total amount of likes, comments, and average of ratings respectively.
+![Count features](src/images/total-count.png)
 
 #### Game Page:
 
-![Game Page](static/images-readme/features-resourcespage.png)
+![Game Page](src/images/game-page.png)
 
 #### Comment feature:
 
-![Comment feature](static/images-readme/features-postdetails.png)
+![Comment feature](src/images/comments-feature.png)
 
 #### Like icon feature:
 
-![Like icon feature](static/images-readme/features-like-system.png)
+![Like icon feature](src/images/like-icon.png)
 
 #### Ratings feature:
 
-![Post Details Comment Section](static/images-readme/features-comment-system.png)
+![Ratings feature](src/images/ratings-feature.png)
 
 #### Create Game Page:
 
-![Post Details Comment Section](static/images-readme/features-comment-system.png)
+![Create Game Page](src/images/create-game.png)
 
 #### Search bar feature:
 
-![Post Details Comment Section](static/images-readme/features-comment-system.png)
+- Waits a couple of seconds before updating search incase user is still typing.
+![Search bar feature](src/images/search-bar.png)
 
 #### Liked page:
 
-![Post Details Comment Section](static/images-readme/features-comment-system.png)
+- Displays a list of all liked game in order from latest to oldest.
+![Liked Page](src/images/liked-page.png)
 
 #### Profile page:
 
-![Post Details Comment Section](static/images-readme/features-comment-system.png)
-
+![Profile Page](src/images/profile-page.png)
 
 #### Log in, Log out & Sign up:
 
-##### Login:
+##### Sign-in:
 
-![Login](static/images-readme/features-signin-page.png)
+![Sign-in](src/images/sign-in.png)
 
 ##### Sign-up:
 
-![Sign-up](static/images-readme/features-signup-page.png)
+![Sign-up](src/images/sign-up.png)
 
 ### C.R.U.D:
 
 #### Newsletter Subscription Page - Create:
 - This gives users the option to sign up for the newsletter by entering their email before being alerted on the success of their subsription.
 - It is only visible to users who are signed in.
-![CRUD - create button](static/images-readme/features-subscription-page.png)
+![CRUD - created game](src/images/create-game-edit.png)
 
 #### Newsletter Subscription Page - Read:
 - User is alerted as to the successful subsription...
-![CRUD - read](static/images-readme/features-subscription-alert.png)
-- ...before being led to the email-list page with a display of the email(s) they have subscribed on their account alone.
-![CRUD - read(2)](static/images-readme/features-editsubscription-page.png)
+![CRUD - Comments edit menu](src/images/comments-feature-menu.png)
 
 #### Newsletter Subscription Page - Update:
 - The user is given the option to edit the email address on their account alone.
-![CRUD - update](static/images-readme/features-updatesubscription-page.png)
+![CRUD - update](src/images/like-icon.png)
 
 #### Newsletter Subscription Page - Delete:
 - The user is given the option to delete an email(s) and unscubscribe on their account alone.
