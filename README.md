@@ -271,7 +271,10 @@ All the images of dice in this image were taken from [freeiconspng](https://www.
 ![CRUD - Profile Page edit](src/images/profile-page-edit.png)
 
 ### Features Left to Implement
-- .
+- Using the GameDataContext, we plan to add a feature to the game to display the top-rated games according to the total averages our community users have given.
+- Forum for users to have more in-depth conversations and thus increase user interaction within the community.
+- Nested comments within the review section to users to interact or react to each other's reviews.
+- Additional app dedicated to informing our users of upcoming board-gaming events.
 
 ## Testing
 
