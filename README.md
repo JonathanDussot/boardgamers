@@ -132,16 +132,29 @@ G
 
 ![Colour Palette](static/images-readme/colour-scheme.png)
 
-- #fff - is typically used as my background colour and also text colour in the case of there being a dark-coloured background.
-- #212529 - is the text colour used throughout the webpage when there is a light-coloured background.
-- #188181 - to resemble some familiarity with the blue colour within the logo, a different shade was actually used to help with the colour contrast issues.
-- #F06814 - to resemble the orange colour within the logo and give a more familiar feeling throughout the webpage.
-- #445261 - is used in the mastheads within the post details html pages to contrast the image colours.
+P
+E
+N
+D
+I
+N
+G
+!
+!
+!
 
 ### Typography:
 All fonts were obtained from the Google Fonts library. I chose the following fonts for the page:
-1. Poppins: used for titles and Navbar elements such as the nav-items and text-muted phrase.
-2. Open Sans: Typically used for the body text of the webpage.
+P
+E
+N
+D
+I
+N
+G
+!
+!
+!
 
 ### Imagery:
 
@@ -186,16 +199,19 @@ All the images of dice in this image were taken from [freeiconspng](https://www.
 ##### Mobile:
 
 -Upon clicking on the dropdown menu, options appear:
+
 ![Navbar mobile](src/images/navbar-smaller.png)
 
 #### Games Page:
 
 - Games appear in a list in order from latest to oldest.
+
 ![Games page](src/images/games-page.png)
 
 #### Count features on Games Page:
 
 -Displays total amount of likes, reviews, and average of ratings respectively.
+
 ![Count features](src/images/total-count.png)
 
 #### Game Page:
@@ -221,11 +237,13 @@ All the images of dice in this image were taken from [freeiconspng](https://www.
 #### Search bar feature:
 
 - Waits a couple of seconds before updating search incase user is still typing.
+
 ![Search bar feature](src/images/search-bar.png)
 
 #### Liked page:
 
 - Displays a list of all liked game in order from latest to oldest.
+
 ![Liked Page](src/images/liked-page.png)
 
 #### Profile page:
@@ -247,31 +265,36 @@ All the images of dice in this image were taken from [freeiconspng](https://www.
 #### Created Game Page:
 - Once the dots to the top-right corner are clicked on, they are given the option to edit or delete the game post they've created.
 - Only the owner of the Game is shown the three-dot dropdown menu with access to these options.
+
 ![CRUD - created game edit menu](src/images/create-game-edit.png)
 
 #### Review Game Page:
 - Once the dots to the top of the review are clicked on, they are given the option to edit or delete the review they've created.
 - Only the owner of the review is shown the three-dot dropdown menu with access to these options.
+
 ![CRUD - Review edit menu](src/images/review-feature-menu.png)
 
 #### Like Icon:
 - The user is given the option to unlike the Game post the same way they liked it to begin with, by clicking on the icon. icon will change colour.
 - Users are not given the possibility to like their own posts.
+
 ![CRUD - Like-icon](src/images/like-icon.png)
 
 #### Ratings Game Page:
 - User is given the option below their initial rating to edit and update their rating or delete it.
 - Only the owner of the rating is shown these options.
 - If the user chooses to update, and clicked on the 'edit' button, the six dice images will re-appear for the user to correctly update.
+
 ![CRUD - Ratings edit menu](src/images/ratings-feature-edit.png)
 
 #### Profile Page:
 - Once the dots to the top-right corner are clicked on, they are given the option to edit their profile or change either their username or password.
 - Only the owner of the Game is shown the three-dot dropdown menu with access to these options.
+
 ![CRUD - Profile Page edit](src/images/profile-page-edit.png)
 
 ### Features Left to Implement
-- Using the GameDataContext, we plan to add a feature to the game to display the top-rated games according to the total averages our community users have given.
+- Using the GameDataContext.js, we plan to add a feature to the game to display the top-rated games according to the total averages our community users have given.
 - Forum for users to have more in-depth conversations and thus increase user interaction within the community.
 - Nested comments within the review section to users to interact or react to each other's reviews.
 - Additional app dedicated to informing our users of upcoming board-gaming events.
