@@ -250,7 +250,7 @@ All the images of dice in this image were taken from [freeiconspng](https://www.
 
 ![Profile Page](src/images/profile-page.png)
 
-#### Log in, Log out & Sign up:
+#### Sign in & Sign up:
 
 ##### Sign-in:
 
