@@ -117,27 +117,16 @@ These can be found in our [API's README.md](https://github.com/JonathanDussot/dr
 
 #### Home Page: 
 
-![Home Page](static/images-readme/wireframe-homepage.png)
-
-#### Post Details Page:
-
-![Post Details Page](static/images-readme/wireframe-postdetail-page.png)
-
-#### About Page:
-
-![About Page](static/images-readme/wireframe-aboutpage.png)
-
-#### Resources Page:
-
-![Resources Page](static/images-readme/wireframe-resourcespage.png)
-
-#### Newsletter Page:
-
-![Newsletter Page](static/images-readme/wireframe-newsletter-page.png)
-
-### Database Schema
-
-![Database Schema](static/images-readme/hidden-gems-erd-diagram.png)
+P
+E
+N
+D
+I
+N
+G
+!
+!
+!
 
 ### Colour Scheme:
 
@@ -198,33 +187,46 @@ All the images of dice in this image were taken from [freeiconspng](https://www.
 
 ![Navbar mobile](static/images-readme/features-mobile-navbar.png)
 
-#### Paginated features:
-- Leads user to next/ previous page(s) assuming there's more posts than the page's limit.
-![paginated](static/images-readme/features-paginated.png)
+#### Games Page:
 
-#### About Page:
+![Games page](static/images-readme/features-aboutpage.png)
 
-![About page](static/images-readme/features-aboutpage.png)
-
-#### Collaboration Form on About Page:
+#### Count features on Games Page:
 
 ![Collaboration form](static/images-readme/features-collaboration-request.png)
 
-#### Travel Resources Page:
+#### Game Page:
 
-![Resources Page](static/images-readme/features-resourcespage.png)
+![Game Page](static/images-readme/features-resourcespage.png)
 
-#### Post Details Page:
+#### Comment feature:
 
-![Post Details Page](static/images-readme/features-postdetails.png)
+![Comment feature](static/images-readme/features-postdetails.png)
 
-#### Like button feature:
+#### Like icon feature:
 
-![Like button feature](static/images-readme/features-like-system.png)
+![Like icon feature](static/images-readme/features-like-system.png)
 
-#### Post Details Comment Section:
+#### Ratings feature:
 
 ![Post Details Comment Section](static/images-readme/features-comment-system.png)
+
+#### Create Game Page:
+
+![Post Details Comment Section](static/images-readme/features-comment-system.png)
+
+#### Search bar feature:
+
+![Post Details Comment Section](static/images-readme/features-comment-system.png)
+
+#### Liked page:
+
+![Post Details Comment Section](static/images-readme/features-comment-system.png)
+
+#### Profile page:
+
+![Post Details Comment Section](static/images-readme/features-comment-system.png)
+
 
 #### Log in, Log out & Sign up:
 
@@ -232,17 +234,9 @@ All the images of dice in this image were taken from [freeiconspng](https://www.
 
 ![Login](static/images-readme/features-signin-page.png)
 
-##### Logout:
-
-![Logout](static/images-readme/features-signout-page.png)
-
 ##### Sign-up:
 
 ![Sign-up](static/images-readme/features-signup-page.png)
-
-#### Footer:
-
-![Footer](static/images-readme/features-footer.png)
 
 ### C.R.U.D:
 
