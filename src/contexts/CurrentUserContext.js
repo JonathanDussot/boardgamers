@@ -11,9 +11,11 @@ export const useCurrentUser = () => useContext(CurrentUserContext);
 export const useSetCurrentUser = () => useContext(SetCurrentUserContext);
 
 export const CurrentUserProvider = ({ children }) => {
+    // State to hold the current user
     const [currentUser, setCurrentUser] = useState(null);
     const history = useHistory();
 
+    // Function to fetch the current user data from the API
     const handleMount = async () => {
         try {
             const { data } = await axiosRes.get("dj-rest-auth/user/");
@@ -23,17 +25,21 @@ export const CurrentUserProvider = ({ children }) => {
         }
     };
 
+    // Effect to run on component mount to fetch current user data
     useEffect(() => {
         handleMount();
     }, []);
 
+    // Set up axios interceptors for request and response handling
     useMemo(() => {
+        // Request interceptor to refresh token if necessary before making a request
         axiosReq.interceptors.request.use(
             async (config) => {
                 if (shouldRefreshToken()) {
                     try {
                         await axios.post("/dj-rest-auth/token/refresh/");
                     } catch (err) {
+                        // If token refresh fails, redirect to sign-in
                         setCurrentUser((prevCurrentUser) => {
                             if (prevCurrentUser) {
                                 history.push("/signin");
@@ -51,6 +57,7 @@ export const CurrentUserProvider = ({ children }) => {
             }
         );
 
+        // Response interceptor to handle 401 errors and refresh the token
         axiosRes.interceptors.response.use(
             (response) => response,
             async (err) => {
@@ -58,6 +65,7 @@ export const CurrentUserProvider = ({ children }) => {
                     try {
                         await axios.post("/dj-rest-auth/token/refresh/");
                     } catch (err) {
+                        // If token refresh fails, redirect to sign-in
                         setCurrentUser((prevCurrentUser) => {
                             if (prevCurrentUser) {
                                 history.push("/signin");

@@ -1,6 +1,7 @@
 export const ProfileDataProvider = ({ children }) => {
+    // Stores data for user's profile page
     const [profileData, setProfileData] = useState({
-      pageProfile: { results: [] },   // Stores data for a user's profile page
+      pageProfile: { results: [] },
     });
   
     const currentUser = useCurrentUser();

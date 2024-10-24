@@ -12,13 +12,14 @@ export const GameDataProvider = ({ children }) => {
     topRatedGames: { results: [] }, // Stores top-rated games
   });
 
+  // fetches average ratings of games and orders them
   useEffect(() => {
     const fetchTopRatedGames = async () => {
       try {
         const { data } = await axiosReq.get("/games/?ordering=-average_rating");
         setGameData((prevState) => ({
           ...prevState,
-          topRatedGames: data, // Store top-rated games
+          topRatedGames: data,
         }));
       } catch (err) {
         console.log(err);
