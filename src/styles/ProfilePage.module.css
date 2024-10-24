@@ -11,11 +11,12 @@
     height: 240px;
     width: 240px;
     margin: 10px;
+}
+
+/* for smaller than 991px screens */
+@media screen and (max-width: 991px) {
+  .ProfileImage {
+    width: 250px;
+    height: 250px;
   }
-  
-  @media screen and (max-width: 991px) {
-    .ProfileImage {
-      width: 250px;
-      height: 250px;
-    }
-  }
+}

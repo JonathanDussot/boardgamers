@@ -1,3 +1,4 @@
+/* Button styles */
 .Button {
     border: none;
     background-color: #242a3d;
@@ -14,6 +15,7 @@
     color: #242a3d;
 }
 
+/* Rating section profile image style*/
 .RatingImg {
     width: 40px;
     height: 40px;

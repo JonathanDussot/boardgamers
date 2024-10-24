@@ -1,24 +1,26 @@
+/* General Card body style */
 .Game {
-    background-color: #ffffff;
-    border: 1px solid #dadadf;
-    border-radius: 2px;
-    margin-bottom: 16px;
-    text-align: center;
-  }
+  background-color: #ffffff;
+  border: 1px solid #dadadf;
+  border-radius: 2px;
+  margin-bottom: 16px;
+  text-align: center;
+}
   
-  .Game figure,
+.Game figure,
   h5 {
     margin: 0 0;
   }
   
-  .Heart {
-    color: #f85032;
-  }
+/* Like icon options */
+.Heart {
+  color: #f85032;
+}
   
-  .Heart:hover {
-    color: #2142b2;
-  }
+.Heart:hover {
+  color: #2142b2;
+}
   
-  .HeartOutline:hover {
-    color: #f85032;
-  }
+.HeartOutline:hover {
+  color: #f85032;
+}

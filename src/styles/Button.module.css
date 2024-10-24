@@ -9,44 +9,43 @@
     min-width: 75px;
   }
   
-  .Button:hover {
+.Button:hover {
     opacity: 0.8;
     border-color: transparent;
     cursor: pointer;
-  }
+}
   
-  .Button:hover:active {
+.Button:hover:active {
     background-color: #2142b2 !important;
-  }
+}
   
-  .Button:active {
+.Button:active {
     background-color: #2142b2 !important;
-  }
+}
   
-  .Button:focus {
+.Button:focus {
     background-color: #2142b2;
-  }
+}
   
-  .Wide {
+.Wide {
     padding: 10px 50px;
     width: 100%;
-  }
+}
   
-  .Blue,
-  .BlueOutline:hover,
-  .Bright:hover {
+.Blue,
+.BlueOutline:hover,
+.Bright:hover {
     background-color: #2142b2;
     color: #ffffff;
-  }
+}
   
-  .BlueOutline,
-  .Blue:hover {
-    /* border: 1px solid #2142b2; */
+.BlueOutline,
+.Blue:hover {
     background-color: #ffffff;
     color: #2142b2;
-  }
+}
   
-  .Bright {
+.Bright {
     background-color: #2ed9ff;
     color: #2142b2;
-  }
+}

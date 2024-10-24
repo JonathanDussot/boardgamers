@@ -1,9 +1,11 @@
+/* Form style */
 .Form {
     border: none;
     border-bottom: 2px #00d1ff solid;
-  }
+}
   
-  .Button {
+/* Button styling */
+.Button {
     border: none;
     background-color: #242a3d;
     color: aliceblue;
@@ -11,10 +13,10 @@
     padding: 4px 10px;
     min-width: 75px;
     margin: 5px;
-  }
+}
   
-  .Button:hover {
+.Button:hover {
     cursor: pointer;
     background-color: aliceblue;
     color: #242a3d;
-  }
+}

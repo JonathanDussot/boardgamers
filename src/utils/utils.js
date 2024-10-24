@@ -1,6 +1,7 @@
 import jwtDecode from "jwt-decode";
 import { axiosReq } from "../api/axiosDefaults";
 
+// Fetches and loads more data for Game Page for the infinite scroll feature
 export const fetchMoreData = async (resource, setResource) => {
   try {
     const { data } = await axiosReq.get(resource.next);
@@ -16,6 +17,7 @@ export const fetchMoreData = async (resource, setResource) => {
   } catch (err) {}
 };
 
+// Refreshes user's token to stay logged in
 export const setTokenTimestamp = (data) => {
   const refreshTokenTimestamp = jwtDecode(data?.refresh_token).exp;
   localStorage.setItem("refreshTokenTimestamp", refreshTokenTimestamp);
