@@ -3,6 +3,7 @@ import NoResults from "../assets/no-results.png";
 import Asset from "./Asset";
 import styles from "../styles/NotFound.module.css";
 
+// Message displayed when page or url route doesn't exist
 const NotFound = () => {
   return (
     <div  className={styles.NotFound}>

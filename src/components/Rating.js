@@ -5,13 +5,14 @@ import { useCurrentUser } from '../contexts/CurrentUserContext';
 import DiceRating from './DiceRating';
 import styles from "../styles/Rating.module.css"
 
+
 const Rating = ({ gameId }) => {
     const [ratings, setRatings] = useState([]);
     const [averageRating, setAverageRating] = useState(0);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
-    const [userRating, setUserRating] = useState(null); // Stores the user's selected rating
-    const [editingRatingId, setEditingRatingId] = useState(null); // Rating being edited
+    const [userRating, setUserRating] = useState(null);
+    const [editingRatingId, setEditingRatingId] = useState(null);
     const [editingValue, setEditingValue] = useState(null);
     const currentUser = useCurrentUser();
 
@@ -24,7 +25,7 @@ const Rating = ({ gameId }) => {
                 if (data.results.length > 0) {
                     const total = data.results.reduce((sum, rating) => sum + rating.rating, 0);
                     const avg = total / data.results.length;
-                    setAverageRating(avg.toFixed(1)); // Round to 1 decimal
+                    setAverageRating(avg.toFixed(1));
                 } else {
                     // If there are no ratings, set average rating to 0 or some default message
                     setAverageRating(0);
@@ -42,10 +43,12 @@ const Rating = ({ gameId }) => {
 
     const handleSubmitRating = async (event) => {
         event.preventDefault();
+        // Informs users must be logged in to give a rating
         if (!currentUser) {
             alert('You must be logged in to submit a rating.');
             return;
         }
+        // I user submits without choosing a rating
         if (userRating == null) {
             alert('Please select a rating.');
             return;
@@ -56,35 +59,35 @@ const Rating = ({ gameId }) => {
         // If an existing rating is found, update the editing state instead of submitting a new rating
         if (existingRating) {
             alert('You have already rated this game. Please edit your existing rating.');
-            setEditingRatingId(existingRating.id); // Set the ID for editing
-            setEditingValue(existingRating.rating); // Pre-fill the editing value
+            setEditingRatingId(existingRating.id);
+            setEditingValue(existingRating.rating);
             return;
         }
 
         try {
+            // Posts user rating
             const { data } = await axiosReq.post('/ratings/', {
                 rating: userRating,
                 game: gameId
             });
             setRatings((prevRatings) => [...prevRatings, data]);
 
-            // Update average rating
+            // Updates average rating
             const newAvg = ((averageRating * ratings.length) + userRating) / (ratings.length + 1);
             setAverageRating(newAvg.toFixed(1));
-            setUserRating(null); // Reset user rating after submission
+            setUserRating(null);
         } catch (err) {
             console.error('Error submitting rating:', err);
         }
     };
 
+    // Updated new edited rating
     const handleEditRating = async (ratingId) => {
         try {
-            console.log(`Updating rating with ID: ${ratingId}, new value: ${editingValue}`);
             const { data } = await axiosReq.put(`/ratings/${ratingId}/`, {
                 rating: editingValue,
                 game: gameId
             });
-            console.log('Updated data received:', data);
             setRatings((prevRatings) =>
                 prevRatings.map((rating) =>
                     rating.id === ratingId ? { ...rating, rating: data.rating } : rating
@@ -93,9 +96,8 @@ const Rating = ({ gameId }) => {
 
             const total = ratings.reduce((sum, rating) => sum + rating.rating, 0) - (ratings.find(r => r.id === ratingId).rating) + editingValue;
             const newAvg = total / ratings.length;
-            setAverageRating(newAvg.toFixed(1)); // Round to 1 decimal
+            setAverageRating(newAvg.toFixed(1));
 
-            // Reset editing states
             setEditingRatingId(null);
             setEditingValue(null);
         } catch (err) {
@@ -113,6 +115,7 @@ const Rating = ({ gameId }) => {
         }
     };
 
+    // Deletes user's rating
     const handleDeleteRating = async (ratingId) => {
         try {
             await axiosReq.delete(`/ratings/${ratingId}/`);
@@ -122,7 +125,7 @@ const Rating = ({ gameId }) => {
         }
     };
 
-    if (loading) return <Asset spinner />; // Display a spinner while loading
+    if (loading) return <Asset spinner />;
     if (error) return <div>There was an error loading the ratings.</div>;
 
     const userHasRated = ratings.some((rating) => rating.owner === currentUser?.username);

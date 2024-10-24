@@ -20,6 +20,7 @@ const NavBar = () => {
 
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
+  // Handles the option to sign out and removes refresh token
   const handleSignOut = async () => {
     try {
       console.log("Current User:", currentUser);
@@ -32,6 +33,7 @@ const NavBar = () => {
     }
   };
 
+  // Redirects user to Creat Game page
   const addPostIcon = (
     <NavLink
       className={styles.NavLink}
@@ -41,6 +43,8 @@ const NavBar = () => {
       <i className="far fa-plus-square"></i>Add Game Post
     </NavLink>
   );
+
+  // Options in NavBar to lead user to different pages
   const loggedInIcons = (
     <>
       <NavLink
@@ -61,6 +65,8 @@ const NavBar = () => {
       </NavLink>
     </>
   );
+
+  // Options available to logged out users
   const loggedOutIcons = (
     <>
       <NavLink

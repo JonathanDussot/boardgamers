@@ -5,7 +5,9 @@ import dice3 from '../assets/dice3.png';
 import dice4 from '../assets/dice4.png';
 import dice5 from '../assets/dice5.png';
 import dice6 from '../assets/dice6.png';
+import styles from '../styles/DiceRating.module.css';
 
+// DiceRating asset for the Rating section
 const DiceRating = ({ value, onChange }) => {
     const diceImages = [dice1, dice2, dice3, dice4, dice5, dice6];
 
@@ -16,14 +18,8 @@ const DiceRating = ({ value, onChange }) => {
                     key={index}
                     src={dice}
                     alt={`Dice ${index + 1}`}
-                    onClick={() => onChange(index + 1)} // onClick updates the rating
-                    style={{
-                        cursor: 'pointer',
-                        opacity: index < value ? 1 : 0.5, // Highlight selected dice
-                        width: '50px', // Set a width
-                        height: '50px', // Set a height
-                        margin: '8px 5px' // Add some margin between dice
-                    }}
+                    onClick={() => onChange(index + 1)}
+                    className={`${styles.Dice} ${index < value ? styles.active : ''}`}
                 />
             ))}
         </div>
