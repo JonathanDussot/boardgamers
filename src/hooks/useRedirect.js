@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useHistory } from "react-router";
 
+// Redirects user back home if logged in and trying to access Sign in or Sign up page
 export const useRedirect = (userAuthStatus) => {
   const history = useHistory();
 
