@@ -4,14 +4,14 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import Game from './Game'
+import Game from './Game';
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/GamesPage.module.css";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
-import { axiosReq } from '../../api/axiosDefaults'
+import { axiosReq } from '../../api/axiosDefaults';
 
-import NoResults from '../../assets/no-results.png'
+import NoResults from '../../assets/no-results.png';
 import Asset from "../../components/Asset";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
@@ -30,13 +30,13 @@ function GamesPage({ message, filter = "" }) {
     useEffect(() => {
         const fetchGames = async () => {
             try {
-                const { data } = await axiosReq.get(`/games/?${filter}search=${query}`)
-                setGames(data)
-                setHasLoaded(true)
+                const { data } = await axiosReq.get(`/games/?${filter}search=${query}`);
+                setGames(data);
+                setHasLoaded(true);
             } catch (err) {
-                console.log(err)
+                console.log(err);
             }
-        }
+        };
 
         // Waits for a second after user stops typing before searching
         setHasLoaded(false);

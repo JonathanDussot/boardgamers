@@ -51,8 +51,8 @@ function GameCreateForm() {
     image
   } = postData;
 
-  const imageInput = useRef(null)
-  const history = useHistory()
+  const imageInput = useRef(null);
+  const history = useHistory();
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
@@ -74,7 +74,7 @@ function GameCreateForm() {
 
   // Submits Create Game data
   const handleSubmit = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const formData = new FormData();
 
     formData.append('title', title);
@@ -93,7 +93,7 @@ function GameCreateForm() {
 
     try {
       const { data } = await axiosReq.post('/games/', formData);
-      history.push(`/games/${data.id}`)
+      history.push(`/games/${data.id}`);
       toast.success('Game created successfully!');
     } catch (err) {
       console.log(err.response?.data);
@@ -101,7 +101,7 @@ function GameCreateForm() {
         setErrors(err.response?.data);
       }
     }
-  }
+  };
 
   const textFields = (
     <div className="text-center">

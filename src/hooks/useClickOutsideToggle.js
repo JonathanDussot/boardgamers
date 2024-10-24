@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react';
 
 // Closes menu from toggle option is user clicks outside
 const useClickOutsideToggle = () => {

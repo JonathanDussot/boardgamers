@@ -46,8 +46,8 @@ function GameEditForm() {
         image
     } = postData;
 
-    const imageInput = useRef(null)
-    const history = useHistory()
+    const imageInput = useRef(null);
+    const history = useHistory();
     const { id } = useParams();
 
     useEffect(() => {
@@ -106,7 +106,7 @@ function GameEditForm() {
 
     // Adds new updated information to Game post
     const handleSubmit = async (event) => {
-        event.preventDefault()
+        event.preventDefault();
         const formData = new FormData();
 
         formData.append('title', title);
@@ -133,7 +133,7 @@ function GameEditForm() {
                 setErrors(err.response?.data);
             }
         }
-    }
+    };
 
     const textFields = (
         <div className="text-center">

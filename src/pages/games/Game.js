@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from "../../styles/Game.module.css"
+import React from 'react';
+import styles from "../../styles/Game.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
@@ -38,7 +38,7 @@ const Game = (props) => {
 
   // Checks user is owner
   const currentUser = useCurrentUser();
-  const is_owner = currentUser?.username === owner
+  const is_owner = currentUser?.username === owner;
   const history = useHistory();
 
   // Routes user to edit form

@@ -3,7 +3,7 @@ import { axiosReq } from '../../api/axiosDefaults';
 import Asset from '../../components/Asset';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import DiceRating from '../../components/DiceRating';
-import styles from "../../styles/Rating.module.css"
+import styles from "../../styles/Rating.module.css";
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

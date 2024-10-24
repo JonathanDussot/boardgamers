@@ -16,7 +16,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
-import Rating from './../ratings/Rating'
+import Rating from './../ratings/Rating';
 
 // Displays Game and its reviews
 function GamePage() {
@@ -32,15 +32,15 @@ function GamePage() {
                 const [{ data: game }, { data: reviews }] = await Promise.all([
                     axiosReq.get(`/games/${id}`),
                     axiosReq.get(`/reviews/?game=${id}`)
-                ])
-                setGame({ results: [game] })
+                ]);
+                setGame({ results: [game] });
                 setReviews(reviews);
             } catch (err) {
-                console.log(err)
+                console.log(err);
             }
-        }
+        };
 
-        handleMount()
+        handleMount();
     }, [id]);
 
     const gameTitle = game.results.length > 0 ? game.results[0].title : "Game Title";

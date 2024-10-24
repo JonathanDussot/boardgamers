@@ -308,37 +308,21 @@ These were supplied by [react toastify](https://deadsimplechat.com/blog/react-to
 ## Testing
 
 ### Validator Testing
+
+- W3 HTML Validator
+
+I ran the website through the validator and recieved no errors.
+![W3 Validator HTML](src/images/w3validator-html.png).
+
+- W3c CSS Validator
+
+I ran the website through the validator and recieved no errors.
+![W3c Validator CSS](src/images/w3cvalidator-css.png)
+
+- I also checked each of my JS fies through JSHint and found no errors in any of the files
+
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** |
 | ----------------------------- | ----------------------- | --------------------------- | ---------- |
-| gems - settings.py | PEP8 validator | [No issues found](static/images-readme/pep8-validator-python.png) | ✅ |
-| gems - urls.py | PEP8 validator | No issues found | ✅ |
-| blog app - forms.py | PEP8 validator | No issues found | ✅ |
-| blog app - models.py | PEP8 validator | No issues found | ✅ |
-| blog app - views.py | PEP8 validator | No issues found | ✅ |
-| blog app - urls.py | PEP8 validator | No issues found | ✅ |
-| blog app - admin.py | PEP8 validator | No issues found | ✅ |
-| about app - forms.py | PEP8 validator | No issues found | ✅ |
-| about app - models.py | PEP8 validator | No issues found | ✅ |
-| about app - views.py | PEP8 validator | No issues found | ✅ |
-| about app - urls.py | PEP8 validator | No issues found | ✅ |
-| about app - admin.py | PEP8 validator | No issues found | ✅ |
-| newsletter app - forms.py | PEP8 validator | No issues found | ✅ |
-| newsletter app - models.py | PEP8 validator | No issues found | ✅ |
-| newsletter app - views.py | PEP8 validator | No issues found | ✅ |
-| newsletter app - urls.py | PEP8 validator | No issues found | ✅ |
-| newsletter app - admin.py | PEP8 validator | No issues found | ✅ |
-| resources app - forms.py | PEP8 validator | No issues found | ✅ |
-| resources app - models.py | PEP8 validator | No issues found | ✅ |
-| resources app - views.py | PEP8 validator | No issues found | ✅ |
-| resources app - urls.py | PEP8 validator | No issues found | ✅ |
-| resources app - admin.py | PEP8 validator | No issues found | ✅ |
-| style.css | [W3C - Jigsaw](https://jigsaw.w3.org/css-validator/) validator | [No issues found](static/images-readme/w3c-validator-css.png) | ✅ |
-| Home page - html | [W3C](https://validator.w3.org/) validator - source code | [No issues found](static/images-readme/w3c-validator-html.png) | ✅ |
-| About page - html | W3C validator - source code | No issues found | ✅ |
-| Post Details page - html | W3C validator - source code | No issues found | ✅ |
-| Resources page - html | W3C validator - source code | No issues found | ✅ |
-| Newsletter page - html | W3C validator - source code | No issues found | ✅ |
-| Sign-in page - html | W3C validator - source code | No issues found | ✅ |
 | Home page - html | lighthouse | [Acceptable scores](static/images-readme/lighthouse.png) | ✅ |
 | About page - html | lighthouse | Acceptable scores | ✅ |
 | Post-Details page - html | lighthouse | Acceptable scores | ✅ |
