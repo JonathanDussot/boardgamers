@@ -72,44 +72,44 @@ These can be found in our [API's README.md](https://github.com/JonathanDussot/dr
 - Here is a list of all my user stories which can be found in my frontend [project](https://github.com/users/JonathanDussot/projects/7/views/1) which employs the Agile methodology approach in an organized manner, each with their labels as per MoSCoW prioritization of tasks. ![kanbanboard](src/images/kanban-frontend-board.png)
 
 #### Home:
-- [x] As a user I can enter key words or a user name in the search field so that I can filter my viewed games list to only entries of that particular keyword.
-- [x] As a user I can stay logged in until I choose to logout so that my user experience is not compromised.
-- [x] As a user I can scroll down so that I can load more list items to view instead of switching pages.
-- [x] As a user I can view all games on the home page.
-- [x] As a signed in user I can sign out so that I can close my account and return to home page.
+- [x] As a user I can enter key words or a user name in the search field so that I can filter my viewed games list to only entries of that particular keyword. **(Sprint 2)**
+- [x] As a user I can stay logged in until I choose to logout so that my user experience is not compromised. **(Sprint 2)**
+- [x] As a user I can scroll down so that I can load more list items to view instead of switching pages. **(Sprint 2)**
+- [x] As a user I can view all games on the home page. **(Sprint 1)**
+- [x] As a signed in user I can sign out so that I can close my account and return to home page. **(Sprint 1)**
 
 #### Authentication:
-- [x] As a user I can determine I'm logged in or if a log in is necessary.
-- [x] As a user I can sign in so that I can use all user features from my account.
-- [x] As a new user I can sign up so that I can create an account as a user.
+- [x] As a user I can determine I'm logged in or if a log in is necessary. **(Sprint 1)**
+- [x] As a user I can sign in so that I can use all user features from my account. **(Sprint 1)**
+- [x] As a new user I can sign up so that I can create an account as a user. **(Sprint 1)**
 
 #### Games posts:
-- [x] As a logged in user I can delete a post I own so that it is removed altogether.
-- [x] As a logged in user I can edit a game post I own so that I can update the post details.
-- [x] As a logged in user I can Create a new Game post so that I can add a game to the hme page for other users to see.
+- [x] As a logged in user I can Create a new Game post so that I can add a game to the hme page for other users to see. **(Sprint 2)**
+- [x] As a logged in user I can edit a game post I own so that I can update the post details. **(Sprint 2)**
+- [x] As a logged in user I can delete a post I own so that it is removed altogether. **(Sprint 2)**
 
 #### Game Reviews:
-- [x] As a logged in user I can delete a review I own so that it is removed altogether.
-- [x] As a logged in user I can edit a review I own so that I can update the information within my review.
-- [x] As a logged in user I can create a review so that other users and I can interact.
-- [x] As a user I can click on a game and view its reviews.
+- [x] As a user I can click on a game and view its reviews. **(Sprint 2)**
+- [x] As a logged in user I can create a review so that other users and I can interact. **(Sprint 2)**
+- [x] As a logged in user I can edit a review I own so that I can update the information within my review. **(Sprint 2)**
+- [x] As a logged in user I can delete a review I own so that it is removed altogether. **(Sprint 2)**
 
 #### Likes:
-- [x] As a logged in user I can view a list from my NavBar of all the Games I have liked.
-- [x] As a logged in user I can like and unlike a game so that express my interest in others' posts.
+- [x] As a logged in user I can like and unlike a game so that express my interest in others' posts. **(Sprint 1)**
+- [x] As a logged in user I can view a list from my NavBar of all the Games I have liked. **(Sprint 2)**
 
 #### Ratings:
-- [x] As a logged in user I can delete a game rating I own so that it is removed from game post's existing ratings.
-- [x] As a logged in user I can edit my game rating so that I can update my rating for others to see.
-- [x] As a logged in user I can give a game a rating so that I can interact with other users' game posts.
+- [x] As a logged in user I can give a game a rating so that I can interact with other users' game posts. **(Sprint 3)**
+- [x] As a logged in user I can edit my game rating so that I can update my rating for others to see. **(Sprint 3)**
+- [x] As a logged in user I can delete a game rating I own so that it is removed from game post's existing ratings. **(Sprint 3)**
 
 #### Navigation bar:
-- [x] As a user I can always view the NavBar so that I can navigate between pages.
+- [x] As a user I can always view the NavBar so that I can navigate between pages. **(Sprint 1)**
 
 #### Profiles:
-- [x] As a logged in user I can change my username or password for access purposes.
-- [x] As a logged in user I can view and edit my own profile image and details so that other users can see when visiting my profile.
-- [x] As a user I can view other users' profiles so that I can see their profile information.
+- [x] As a user I can view other users' profiles so that I can see their profile information. **(Sprint 2)**
+- [x] As a logged in user I can change my username or password for access purposes. **(Sprint 3)**
+- [x] As a logged in user I can view and edit my own profile image and details so that other users can see when visiting my profile. **(Sprint 3)**
 
 ## Design
 
