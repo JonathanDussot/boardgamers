@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import { axiosReq } from '../../api/axiosDefaults';
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
 
+// Displays user's profile data
 const ProfilePage = () => {
   const { id } = useParams();
   const [profileData, setProfileData] = useState(null);

@@ -8,6 +8,7 @@ import styles from "../../styles/ReviewCreateEditForm.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
+// Handles review create form and increases review count
 function ReviewCreateForm(props) {
   const { game, setGame, setReviews, profileImage, profile_id } = props;
   const [content, setContent] = useState("");

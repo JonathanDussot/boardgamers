@@ -33,14 +33,17 @@ const Game = (props) => {
     average_rating,
   } = props;
 
+  // Checks user is owner
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner
   const history = useHistory();
 
+  // Routes user to edit form
   const handleEdit = () => {
     history.push(`/games/${id}/edit`);
   };
 
+  // Handles delete function
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/games/${id}/`);
@@ -50,6 +53,7 @@ const Game = (props) => {
     }
   };
 
+  // Handles 'like' function
   const handleLike = async () => {
     try {
       const { data } = await axiosRes.post("/likes/", { game: id });
@@ -66,6 +70,7 @@ const Game = (props) => {
     }
   };
 
+  // Handles 'unlike' function
   const handleUnlike = async () => {
     try {
       await axiosRes.delete(`/likes/${like_id}/`);

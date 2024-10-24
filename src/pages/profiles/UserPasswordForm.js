@@ -14,6 +14,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
+// Handles user's password data
 const UserPasswordForm = () => {
   const history = useHistory();
   const { id } = useParams();
@@ -34,9 +35,9 @@ const UserPasswordForm = () => {
     });
   };
 
+  // Updates user's new password if profile owner
   useEffect(() => {
     if (currentUser?.profile_id?.toString() !== id) {
-      // redirect user if they are not the owner of this profile
       history.push("/");
     }
   }, [currentUser, history, id]);

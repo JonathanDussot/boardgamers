@@ -9,6 +9,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 
 import ReviewEditForm from "./ReviewEditForm";
 
+// Handles review data and provides edit and delete options if profile's owner
 const Review = (props) => {
     const {
         profile_id,

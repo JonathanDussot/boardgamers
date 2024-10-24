@@ -14,6 +14,7 @@ import { Image } from "react-bootstrap";
 import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
+// Handles Game Edit form data
 function GameEditForm() {
     const [errors, setErrors] = useState({});
 

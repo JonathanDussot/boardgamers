@@ -18,6 +18,7 @@ import {
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
+// Handles Profile Edit form data
 const ProfileEditForm = () => {
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
@@ -53,6 +54,7 @@ const ProfileEditForm = () => {
         handleMount();
     }, [currentUser, history, id]);
 
+    // Replaces previous form data
     const handleChange = (event) => {
         setProfileData({
             ...profileData,
@@ -60,6 +62,7 @@ const ProfileEditForm = () => {
         });
     };
 
+    // Submits new profile data
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();

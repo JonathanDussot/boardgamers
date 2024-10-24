@@ -17,6 +17,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
+// Displays Games list
 function GamesPage({ message, filter = "" }) {
     const [games, setGames] = useState({ results: [] });
     const [hasLoaded, setHasLoaded] = useState(false);
@@ -25,6 +26,7 @@ function GamesPage({ message, filter = "" }) {
 
     const [query, setQuery] = useState("");
 
+    // Handles Data introduced in search bar
     useEffect(() => {
         const fetchGames = async () => {
             try {
@@ -36,6 +38,7 @@ function GamesPage({ message, filter = "" }) {
             }
         }
 
+        // Waits for a second after user stops typing before searching
         setHasLoaded(false);
         const timer = setTimeout(() => {
             fetchGames();

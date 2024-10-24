@@ -18,6 +18,7 @@ import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import Rating from './../../components/Rating'
 
+// Displays Game and its reviews
 function GamePage() {
     const { id } = useParams();
     const [game, setGame] = useState({ results: [] });

@@ -19,6 +19,7 @@ import signinupimage from "../../assets/signinup-pic.jpg";
 import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";
 
+// Handles Sign in form data
 function SignInForm() {
   const setCurrentUser = useSetCurrentUser();
   useRedirect('loggedIn')

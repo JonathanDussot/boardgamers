@@ -5,6 +5,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 
 import styles from "../../styles/ReviewCreateEditForm.module.css";
 
+// Handles Review Edit form data
 function ReviewEditForm(props) {
     const { id, content, setShowEditForm, setReviews } = props;
 
@@ -14,6 +15,7 @@ function ReviewEditForm(props) {
         setFormContent(event.target.value);
     };
 
+    // Replaces Review form data
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {

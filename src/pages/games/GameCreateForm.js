@@ -18,6 +18,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
 
+// Handles Create game data
 function GameCreateForm() {
   useRedirect('loggedOut');
   const [errors, setErrors] = useState({});
@@ -68,6 +69,7 @@ function GameCreateForm() {
     }
   };
 
+  // Submits Create Game data
   const handleSubmit = async (event) => {
     event.preventDefault()
     const formData = new FormData();
@@ -88,10 +90,9 @@ function GameCreateForm() {
 
     try {
       const { data } = await axiosReq.post('/games/', formData);
-      console.log(data);
       history.push(`/games/${data.id}`)
     } catch (err) {
-      console.log(err.response?.data); // Log the error response data
+      console.log(err.response?.data);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
