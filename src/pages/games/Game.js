@@ -7,6 +7,9 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from '../../components/MoreDropdown';
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Game = (props) => {
   const {
     id,
@@ -48,6 +51,7 @@ const Game = (props) => {
     try {
       await axiosRes.delete(`/games/${id}/`);
       history.goBack();
+      toast.success('Game deleted successfully!');
     } catch (err) {
       console.log(err);
     }
@@ -65,6 +69,7 @@ const Game = (props) => {
             : game;
         }),
       }));
+      toast.success('Added to your "Liked" page!');
     } catch (err) {
       console.log(err);
     }
@@ -82,6 +87,7 @@ const Game = (props) => {
             : game;
         }),
       }));
+      toast.success('Game removed from your "Liked" page');
     } catch (err) {
       console.log(err);
     }
@@ -104,7 +110,12 @@ const Game = (props) => {
       </Media>
     </Card.Body>
     <Link to={`/games/${id}`}>
-      <Card.Img src={image} alt={title} height={540} />
+      <Card.Img
+        src={image}
+        alt={title}
+        height={540}
+        className={styles.CardImg}
+      />
     </Link>
     <Card.Body>
       <Link to={`/games/${id}`}>

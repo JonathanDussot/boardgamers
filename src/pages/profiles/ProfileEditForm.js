@@ -18,6 +18,9 @@ import {
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // Handles Profile Edit form data
 const ProfileEditForm = () => {
     const currentUser = useCurrentUser();
@@ -80,6 +83,7 @@ const ProfileEditForm = () => {
                 profile_image: data.image,
             }));
             history.goBack();
+            toast.success('Profile updated successfully!');
         } catch (err) {
             console.log(err);
             setErrors(err.response?.data);

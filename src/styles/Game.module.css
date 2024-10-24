@@ -10,8 +10,13 @@
 .Game figure,
   h5 {
     margin: 0 0;
-  }
-  
+}
+
+.CardImg {
+  object-fit: contain;
+  padding: 0 15px;
+}
+
 /* Like icon options */
 .Heart {
   color: #f85032;

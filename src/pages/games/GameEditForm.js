@@ -14,6 +14,9 @@ import { Image } from "react-bootstrap";
 import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // Handles Game Edit form data
 function GameEditForm() {
     const [errors, setErrors] = useState({});
@@ -101,6 +104,7 @@ function GameEditForm() {
         }
     };
 
+    // Adds new updated information to Game post
     const handleSubmit = async (event) => {
         event.preventDefault()
         const formData = new FormData();
@@ -122,6 +126,7 @@ function GameEditForm() {
         try {
             await axiosReq.put(`/games/${id}/`, formData);
             history.push(`/games/${id}`);
+            toast.success('Game updated successfully!');
         } catch (err) {
             console.log(err);
             if (err.response?.status !== 401) {

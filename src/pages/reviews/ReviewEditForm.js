@@ -4,6 +4,8 @@ import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/axiosDefaults";
 
 import styles from "../../styles/ReviewCreateEditForm.module.css";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Handles Review Edit form data
 function ReviewEditForm(props) {
@@ -35,6 +37,7 @@ function ReviewEditForm(props) {
                 }),
             }));
             setShowEditForm(false);
+            toast.success('Review updated successfully!');
         } catch (err) {
             console.log(err);
         }

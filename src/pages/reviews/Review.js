@@ -8,6 +8,8 @@ import { MoreDropdown } from '../../components/MoreDropdown';
 import { axiosRes } from "../../api/axiosDefaults";
 
 import ReviewEditForm from "./ReviewEditForm";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Handles review data and provides edit and delete options if profile's owner
 const Review = (props) => {
@@ -42,6 +44,7 @@ const Review = (props) => {
                 ...prevReviews,
                 results: prevReviews.results.filter((review) => review.id !== id),
             }));
+            toast.success('Review deleted successfully!');
         } catch (err) { }
     };
 

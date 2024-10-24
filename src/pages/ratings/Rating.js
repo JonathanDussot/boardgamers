@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { axiosReq } from '../api/axiosDefaults';
-import Asset from './Asset'; // Optional spinner or error handler
-import { useCurrentUser } from '../contexts/CurrentUserContext';
-import DiceRating from './DiceRating';
-import styles from "../styles/Rating.module.css"
+import { axiosReq } from '../../api/axiosDefaults';
+import Asset from '../../components/Asset';
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import DiceRating from '../../components/DiceRating';
+import styles from "../../styles/Rating.module.css"
+
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Rating = ({ gameId }) => {
@@ -21,6 +24,15 @@ const Rating = ({ gameId }) => {
             try {
                 const { data } = await axiosReq.get(`/ratings/?game=${gameId}`);
                 setRatings(data.results);
+                const showDeletedToast = localStorage.getItem('showDeletedToast');
+                /**
+                * Show success message if localstorage deems that a 
+                * rating has been deleted and page reloaded
+                */
+                if (showDeletedToast) {
+                    toast.success('Rating deleted successfully!');
+                    localStorage.removeItem('showDeletedToast');
+                }
                 // Calculate average rating
                 if (data.results.length > 0) {
                     const total = data.results.reduce((sum, rating) => sum + rating.rating, 0);
@@ -76,6 +88,7 @@ const Rating = ({ gameId }) => {
             const newAvg = ((averageRating * ratings.length) + userRating) / (ratings.length + 1);
             setAverageRating(newAvg.toFixed(1));
             setUserRating(null);
+            toast.success('Rating submitted successfully!');
         } catch (err) {
             console.error('Error submitting rating:', err);
         }
@@ -100,6 +113,7 @@ const Rating = ({ gameId }) => {
 
             setEditingRatingId(null);
             setEditingValue(null);
+            toast.success('Rating updated successfully!');
         } catch (err) {
             console.error('Error editing rating:', err);
 
@@ -119,6 +133,7 @@ const Rating = ({ gameId }) => {
     const handleDeleteRating = async (ratingId) => {
         try {
             await axiosReq.delete(`/ratings/${ratingId}/`);
+            localStorage.setItem('showDeletedToast', true);
             window.location.reload();
         } catch (err) {
             console.error('Error deleting rating:', err);

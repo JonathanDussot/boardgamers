@@ -18,6 +18,9 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // Handles Create game data
 function GameCreateForm() {
   useRedirect('loggedOut');
@@ -91,6 +94,7 @@ function GameCreateForm() {
     try {
       const { data } = await axiosReq.post('/games/', formData);
       history.push(`/games/${data.id}`)
+      toast.success('Game created successfully!');
     } catch (err) {
       console.log(err.response?.data);
       if (err.response?.status !== 401) {

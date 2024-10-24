@@ -14,6 +14,9 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // Handles user's password data
 const UserPasswordForm = () => {
   const history = useHistory();
@@ -47,6 +50,7 @@ const UserPasswordForm = () => {
     try {
       await axiosRes.post("/dj-rest-auth/password/change/", userData);
       history.goBack();
+      toast.success('Rating updated successfully!');
     } catch (err) {
       console.log(err);
       setErrors(err.response?.data);

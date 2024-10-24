@@ -8,6 +8,9 @@ import styles from "../../styles/ReviewCreateEditForm.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // Handles review create form and increases review count
 function ReviewCreateForm(props) {
   const { game, setGame, setReviews, profileImage, profile_id } = props;
@@ -37,6 +40,7 @@ function ReviewCreateForm(props) {
         ],
       }));
       setContent("");
+      toast.success('Review submitted successfully!');
     } catch (err) {
       console.log(err);
     }
