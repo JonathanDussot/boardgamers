@@ -6,6 +6,8 @@ import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
 import signinupimage from "../../assets/signinup-pic.jpg";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import {
   Form,
@@ -45,6 +47,7 @@ const SignUpForm = () => {
     try {
       await axios.post("/dj-rest-auth/registration/", signUpData);
       history.push("/signin");
+      toast.success('Sign up successful. Please Sign in!');
     } catch (err) {
       setErrors(err.response?.data);
     }

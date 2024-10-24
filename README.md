@@ -260,6 +260,12 @@ All the images of dice in this image were taken from [freeiconspng](https://www.
 
 ![Sign-up](src/images/sign-up.png)
 
+#### Confirmation messages:
+
+These were supplied by [react toastify](https://deadsimplechat.com/blog/react-toastify-the-complete-guide/#what-are-toast-notifications) to confirm each of the user's decisions throughout the App.
+
+![Confirmation-messages](src/images/confirm-message.png)
+
 ### C.R.U.D:
 
 #### Created Game Page:
