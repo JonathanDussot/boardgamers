@@ -323,30 +323,32 @@ I ran the website through the validator and recieved no errors.
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** |
 | ----------------------------- | ----------------------- | --------------------------- | ---------- |
-| Home page - html | lighthouse | [Acceptable scores](static/images-readme/lighthouse.png) | ✅ |
-| About page - html | lighthouse | Acceptable scores | ✅ |
-| Post-Details page - html | lighthouse | Acceptable scores | ✅ |
-| Resources page - html | lighthouse | Acceptable scores | ✅ |
-| Newsletter page - html | lighthouse | Acceptable scores | ✅ |
+| Home page | lighthouse | [Acceptable scores](src/images/lighthouse.png) | ✅ |
+| Liked Page| lighthouse | Acceptable scores | ✅ |
+| Profile Page | lighthouse | Acceptable scores | ✅ |
+| GamePage | lighthouse | Acceptable scores | ✅ |
+| Sign-up page | lighthouse | Acceptable scores | ✅ |
 | Sign-in page - html | lighthouse | Acceptable scores | ✅ |
-| WAVE results | WAVE | [Acceptable scores](static/images-readme/wave.png) | ✅ |
+| WAVE results | WAVE | [Acceptable scores](src/images/wave-results.png) | ✅ |
 | Microsoft Edge browser | Launch site | Site opens without issue | ✅ |
 | Google Chrome browser | Launch site | Site opens without issue | ✅ |
+
+The results from WAVE mostly highlight that icons don't have a link when infact they are being used as a total count feature.
 
 ### Responsiveness testing
 
 | **TEST**                      | **ACTION**              | **EXPECTATION**             | **RESULT** |
 | ----------------------------- | ----------------------- | --------------------------- | ---------- |
-| Home page - responsiveness    | Size site down to 320px | all elements stay on screen | ✅         |
-| Home page - responsiveness    | Size site up to 1920px  | all elements stay on screen | ✅         |
-| About page - responsiveness   | Size site down to 320px | all elements stay on screen | ✅         |
-| About page - responsiveness   | Size site up to 1920px  | all elements stay on screen | ✅         |
-| Post-Details page - responsiveness  | Size site down to 320px | all elements stay on screen | ✅         |
-| Post-Details page - responsiveness  | Size site up to 1920px  | all elements stay on screen | ✅         |
-| Resources page - responsiveness    | Size site down to 320px | all elements stay on screen | ✅         |
-| Resources page - responsiveness    | Size site up to 1920px  | all elements stay on screen | ✅         |
-| Newsletter page - responsiveness   | Size site up to 1920px  | all elements stay on screen | ✅         |
-| Newsletter page - responsiveness   | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Games page - responsiveness    | Size site down to 320px | all elements stay on screen | ✅         |
+| Games page - responsiveness    | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Liked page - responsiveness   | Size site down to 320px | all elements stay on screen | ✅         |
+| Liked page - responsiveness   | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Game page - responsiveness  | Size site down to 320px | all elements stay on screen | ✅         |
+| Game page - responsiveness  | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Profile page - responsiveness    | Size site down to 320px | all elements stay on screen | ✅         |
+| Profile page - responsiveness    | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Sign-up page - responsiveness   | Size site down to 320px  | all elements stay on screen | ✅         |
+| Sign-up page - responsiveness   | Size site up to 1920px  | all elements stay on screen | ✅         |
 | Sign-in page - responsiveness | Size site down to 320px | all elements stay on screen | ✅         |
 | Sign-in page - responsiveness | Size site up to 1920px  | all elements stay on screen | ✅         |
 
@@ -354,14 +356,14 @@ I ran the website through the validator and recieved no errors.
 
 | **TEST**          | **ACTION**             | **EXPECTATION**          | **RESULT** |
 | ----------------- | ---------------------- | ------------------------ | ---------- |
-| Newsletter subscription - Create     | Add new instance to DB | Instance created         | ✅         |
-| Newsletter subscription - Read       | Retrieve all instances | Instances visible in UI  | ✅         |
-| Newsletter subscription - Update     | Modify an instance     | Mods saved & visible     | ✅         |
-| Newsletter subscription - Delete     | Delete an instance     | Instance removed from UI | ✅         |
-| Comments - Create | Add new instance to DB | Instance created         | ✅         |
-| Comments - Read   | Retrieve all instances | Instances visible in UI  | ✅         |
-| Comments - Update | Add new instance to DB | Mods saved & visible     | ✅         |
-| Comments - Delete   | Retrieve all instances | Instance removed from UI | ✅         |
+| New Game Post - Create     | Add new instance | Instance created         | ✅         |
+| New Game Post - Read       | Retrieve all instances | Instances visible in UI  | ✅         |
+| New Game Post - Update     | Modify an instance     | Mods saved & visible     | ✅         |
+| New Game Post - Delete     | Delete an instance     | Instance removed | ✅         |
+| Reviews - Create | Add new instance | Instance created         | ✅         |
+| Reviews - Read   | Retrieve all instances | Instances visible in UI  | ✅         |
+| Reviews - Update | Add new instance | Mods saved & visible     | ✅         |
+| Reviews - Delete   | Retrieve all instances | Instance removed | ✅         |
 | Like - Create | Add new instance to DB | Instance created         | ✅         |
 | Like - Delete | Delete an instance     | Instance removed from UI | ✅         |
 
@@ -370,64 +372,24 @@ I ran the website through the validator and recieved no errors.
 | **TEST**                      | **ACTION**             | **EXPECTATION**                                           | **RESULT** |
 | ----------------------------- | ---------------------- | --------------------------------------------------------- | ---------- |
 | Navigation bar                | Click on nav link      | user routed to correct page                               | ✅         |
-| Footer links                  | Click on footer links  | user routed to new browser tab                            | ✅         |
+| Game Post - Create                  | Enter characters in integer field  | user given an error                            | ✅         |
+| Creation/ Update submission message                  | clicked on submit/ update/ delete button  | user is informed on success                            | ✅         |
 | Like button                   | Click "like"           | Post liked/unliked accordingly                            | ✅         |
-| Comment section                   | Written empty message           | does not submit, prompts to write a message                            | ✅         |
-| Comment section                   | Write message and submit           | user informed on pending approval                            | ✅         |
-| Edit button                   | Click edit button      | user allowed to edit comment only if previously approved                             | ✅         |
-| Delete button                 | Click delete button    | user allowed to delete comment only if previously approved                                | ✅         |
-| Collaboration form                | Submit form    | user alerted on successful form                                | ✅         |
-| External links in Resources                | Click link             | User routed to appropriate webpage                           | ✅         |
-| Subscription                | enter invalid email             | User prompted to write a valid email                           | ✅         |
-| Subscription CRUD buttons                | Click buttons            | User routed to appropriate page and UI updated                    | ✅         |
-| Login                         | User logs in           | UI updates & user is logged in                            | ✅         |
+| Review section                   | Written empty message           | does not submit, prompts to write a message                            | ✅         |
+| Review section                   | Write message and submit           | Message submits correctly                          | ✅         |
+| Review - Edit button                   | Click edit button      | user allowed to edit review only if owner                             | ✅         |
+| Review - Delete button                 | Click delete button    | user allowed to delete comment only if owner                               | ✅         |
+| Image updated                | Change profile & post image    | both upload successfully                                | ✅         |
+| Ratings average                | multiple ratings submitted/ deleted             | Calculates total average correctly                           | ✅         |
+| Infinite scroll               | created more than 10 posts and scrolled down             | Page loads more posts with no duplicates                          | ✅         |
+| 'Liked' page                | like a post            | 'Liked' posts added to page                    | ✅         |
+| Sign in                         | User signs in           | UI updates & user is signed in, cannot access sign in or sign up page                            | ✅         |
 | Sign up                       | User signs up          | new account created for the user                          | ✅         |
-| Logout                        | User clicks logout     | UI updates, user is logged out, user cannot create a post | ✅         |
+| Sign out                        | User clicks sign out     | UI updates, user is signed out, user cannot create a post | ✅         |
 
 ### BUG TESTING:
-1. Heroku logs--tail error when deploying to Heroku:
- - Added correctly-written web: gunicorn gems.wsgi to ProcFile to link it correctly.
-
-2. 'unexpected chunk number 1 (expected 0)' error:
- - This was caused be corrupted Data upon using loaddata with json.file according to Tutor Support.
- - Uncommented sqlite database and commented out external database to temporarily work on project before eventually providing a solution (mentioned in bug #3)
-
-3. Opening new external Database:
- - Did pip install and pip freeze with all requirements, created env.py file, added new DB URL and secret key, collectstatic, updated CSRF, did makemigrations and migrate command and yet page would not load correctly.
- - The cloudinary URL was missing within the env.py, this allowed the page to load correctly.
-
-4. CSS styles would not load:
- - Upon using terminal command to copy staticfiles into a template folder, accidently created and nested everything within an additional templates folder so url path did not connect.
- - Moved everything out to the correct template folder and css styles were loading correctly.
-
-5. Admin interface content lacked RichText Editor for content fields in resources app:
- - summernote_fields was not correctly linked to content containers within the admin.py file.
-
-6. Likes generated an error:
- - within the blog's models.py the model's related name for the like button clashed with the comment section, I changed the name so code could correctly distinguish model and this fixed the bug.
-
-7. Validator error message <o:p>:
- - This was due to my population of the content fields having used my microsoft word to draft the tet before adding them to the admin interface, could not be seen in my code.
- - Manually accessed and edited code from Admin interface and deleted the tags.
-
-8. Page would break when screen size was below 768px and only provide images:
- - Deleted 'flex: no-wrap' to fix this issue and correctly display text with the images so users can access post details for each post.
-
-9. Editing a comment while awaiting approval:
- - Page would crash is user were to click on the edit button before comment had been approved.
- - Fixed the issue by removing the edit button for comments awaiting approval.
-
-10. Navbar overflow:
- - Navbar displayed overflow off page between 1150px and 990px on all pages.
- - Reduced the logo size, nav-link size and text-muted size so elements would not cause navbar to overflow before collapsing as media response styles take effect.
-
-11. Like button with a reverse path error:
- - Upon correcting some of the hyphens and underscores, the blog's urls.py path had the correct pattern, but the views.py file still had **'post-detail'** instead of **post_detail** within the reverse function call.
-
-### Unfixed Bugs
-1. Sign up form - HTML Validator errors:
-- Upon validating, I noticed [4 errors with tags](static/images-readme/signup-html-errors.png) which were nowhere to be found within my code.
-- With help from Tutor Support, we determined this was from Django's Allauth's error and that I could do nothing to fix it from my end.
+1. Rating.js wouldn't correctly update the total rating average upon deleting a rating.
+- I added a windows.location.reload() method so it could fetch and call the correct recalculated average.
 
 ## Technologies Used
 ### Main Languages Used
@@ -435,8 +397,6 @@ I ran the website through the validator and recieved no errors.
 - CSS3
 - Javascript
 - Python
-- Django
-- SQL - Postgres
 
 ### Frameworks, Libraries & Programs Used
 - [Google Fonts](https://fonts.google.com/) - for the font families: 
@@ -444,85 +404,98 @@ I ran the website through the validator and recieved no errors.
 - [GitPod](https://www.gitpod.io/) - for creating html files, css stylesheet and python files.
 - [GitHub](https://github.com/) - to store my repository for submission.
 - Google Dev tools - to test and fix issues detected.
-- [Pexels](https://www.pexels.com/) to use free images for site.
-- [Free Pik](https://www.freepik.es/) to use free images for site.
+- [Pexels](https://www.pexels.com/) to use free image for site.
+- [Iconos8](https://iconos8.es/) for favicon.
+- [Free icons](https://www.freeiconspng.com/) to use free dice images for rating.
 - [Balsamiq](https://balsamiq.com/) - for the wireframe mockups of my webpage.
 - [Am I Responsive?](https://ui.dev/amiresponsive) - to ensure the webpage displayed well on all devices.
 - [Tiny PNG](https://tinypng.com/) to compress images.
-- [DrawSQL](https://drawsql.app/) - for ERD mockups
+- [Django database extension](https://yathomasi.medium.com/1-using-django-extensions-to-visualize-the-database-diagram-in-django-application-c5fa7e710e16) - for ERD diagrams
 - [FreeLogoDesign](https://app.freelogodesign.org/)
 - [Colormind.io](http://colormind.io/) to generate color palette used. 
-- [cdnjs](https://cdnjs.com/libraries/bootstrap) for bootstrap.
-- Django
-- Bootstrap
+- [react bootstrap](https://react-bootstrap.netlify.app/) for bootstrap.
 
-### Installed Packages:
-- asgiref==3.8.1
-- cloudinary==1.36.0
-- crispy-bootstrap5==0.7
-- dj-database-url==0.5.0
-- dj3-cloudinary-storage==0.0.6
-- Django==5.0.7
-- django-allauth==0.57.2
-- django-crispy-forms==2.2
-- django-summernote==0.8.20.0
-- gunicorn==20.1.0
-- oauthlib==3.2.2
-- psycopg2==2.9.9
-- PyJWT==2.8.0
-- python3-openid==3.2.0
-- requests-oauthlib==2.0.0
-- sqlparse==0.5.0
-- urllib3==1.26.19
-- whitenoise==5.3.0
+### Databases
+
+- [PostgreSQL](https://dbs.ci-dbs.net/)
+
+### Installed Dependancies:
+- "@testing-library/jest-dom": "^5.14.1",
+- "@testing-library/react": "^11.2.7",
+- "@testing-library/user-event": "^12.8.3",
+- "axios": "^0.21.4",
+- "bootstrap": "^4.6.0",
+- "jwt-decode": "^3.1.2",
+- "react": "^17.0.2",
+- "react-bootstrap": "^1.6.3",
+- "react-dom": "^17.0.2",
+- "react-infinite-scroll-component": "^6.1.0",
+- "react-router-dom": "^5.3.0",
+- "react-scripts": "^5.0.1",
+- "react-toastify": "^9.1.3",
+- "web-vitals": "^1.1.2"
 
 ## Deployment
-The site was deployed to Heroku. The steps to deploy are as follows:
-- Install Django & Gunicorn:
-```pip3 install Django~=4.2.1```
-- a django project was created using:
-```django-admin startproject gems .```
-- the blog app was then created with:
-```python3 manage.py startapp blog```
-- Install gunicorn to enable deployment to Heroku:
-```pip3 install gunicorn~=20.1```
-- Creating the requirements.txt file with the following command:
-```pip3 freeze --local > requirements.txt```
-- Install Django summernote:
-```pip3 install django-summernote~=0.8.20.0```
-- Install whitenoise for Heroku to serve its own static files:
-```pip3 install whitenoise~=5.3.0```
-- Add user authentication with the following:
-```pip3 install django-allauth~=0.57.0```
-- Install Cloudinary:
-```pip3 install django-crispy-forms~=2.0 crispy-bootstrap5~=0.7```
-- Install Cloudinary:
-```pip3 install cloudinary~=1.36.0 dj3-cloudinary-storage~=0.0.6 urllib3~=1.26.15```
-- Install Cloudinary:
-```pip3 install dj3-cloudinary-storage```
-- Install Cloudinary:
-```pip3 install dj3-cloudinary-storage```
-- which was then added to the settings.py file within our project directory.
-- the changes were then migrated using:
-```python3 manage.py makemigrations``` and ```python3 manage.py migrate```
-- Collectstatic command for all static files to be deployed without issue:
-```python3 manage.py collectstatic```
-- navigated to [Heroku](www.heroku.com) & created a new app called hidden-gem-blog.
-- added the Heroku Postgres database to the Resources tab.
-- navigated to the Settings Tab, to add the following key/value pairs to the configvars:
-1. key: SECRET_KEY | value: randomkey
-2. key: PORT | value: 8000
-3. key: CLOUDINARY_URL | value: API environment variable
-4. key: DATABASE_URL | value: value supplied by Heroku
-- added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the env.py file
-- added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the settings.py file
-- add an import os statement for the env.py file.
-- added Heroku to the ALLOWED_HOSTS in settings.py
-- created the Procfile
-- pushed the project to Github
-- connected my github account to Heroku through the Deploy tab
-- connected my github project repository, and then clicked on the "Deploy" button
-- The live link for "Hidden Gems" can be found [HERE](https://hidden-gem-blog-d08378ae9ea1.herokuapp.com/)
+
+### Heroku
+
+This site is deployed using Heroku. To deploy it from its GitHub repository to Heroku, I took the following steps:
+
+1. Log in (or sign up) to Heroku
+2. Click on the _New_ button and select _Create new app_
+3. Give it a unique name and choose the region _Europe_
+4. Click the *Deploy* tab, go to the _Deployment method_ section, select _GitHub_ and confirm this selection by clicking on the _Connect to Github_ button
+5. Search for the repository name on github _GamesBlog-frontend_ and click the _Connect_ button
+6. Inside the src folder add an api folder and create an axiosDefault.jsx
+7. Add the link to the deployed version of the api as baseURL
+8. Create a _Procfile_ in the root directory and add *web: npm run start*
+9. In Heroku enable the automatic deploy or manually deploy the code from the main branch
+
+To see the [view of the live site](https://boardgamers-ci-364d7fb71032.herokuapp.com/) click on the _Open app_ button in the top right corner.
+
+### Run Locally
+
+Navigate to the GitHub Repository you want to clone to use locally:
+
+- Click on the code drop down button
+- Click on HTTPS
+- Copy the repository link to the clipboard
+- Open your IDE of choice (git must be installed for the next steps)
+- Type git clone copied-git-url into the IDE terminal
+
+The project will now have been cloned on your local machine for use.
+
+Install Dependencies:
+
+```npm install```
+
+Run Application:
+
+```npm start```
+
+## Development and Deployment
+
+### Development
+
+#### Forking GitHub Repository
+
+Forking allows you to make a copy of a chosen repository to your own GitHub account. This allows you to test and edit the project without making changes to the original. Forking is done by following these steps.
+
+1. Whilst logged into your GitHub account, navigate to the repository you would like to fork.
+2. Click on the **Fork** button at the top right of the page.
+3. Choose a name to give the repository. It will be intially named as the same as the original repository.
+4. Click the **Create Fork** button.
+
+#### Cloning GitHub Repository
+
+Cloning allows you to download a local version of a chosen repository. Cloning can be done by following these steps.
+
+1. Whilst logged into your GitHub account, navigate to the repository you would like to clone.
+2. Click the green **<> Code** button.
+3. Click on the **Local** tab.
+4. Select **HTTPS** and copy the url.
+5. Open your chosen IDE and ensure Git is installed.
+5. In your IDE terminal type **git clone (url link that you copied)** and hit enter.
 
 ## Credits
 

@@ -58,6 +58,9 @@ function GamesPage({ message, filter = "" }) {
                 <Form className={styles.SearchBar}
                     onSubmit={(event) => event.preventDefault()}
                 >
+                    <Form.Label htmlFor="gameSearchInput" className="sr-only">
+                        Search Board Games
+                    </Form.Label>
                     <Form.Control
                         value={query}
                         onChange={(event) => setQuery(event.target.value)}
