@@ -115,18 +115,47 @@ These can be found in our [API's README.md](https://github.com/JonathanDussot/dr
 
 ### Wireframes:
 
-#### Home Page: 
+#### Sign up:
 
-P
-E
-N
-D
-I
-N
-G
-!
-!
-!
+- Wireframe of my sign up page.
+
+![Wireframes Signup](src/images/wireframe-signup.png)
+
+#### Sign in:
+
+- Wireframe of my sign in page.
+
+![Wireframes Signin](src/images/wireframe-signin.png)
+
+#### Games page:
+
+- Wireframe of my Games page containing list of games.
+
+![Game page](src/images/wireframe-gamespage.png)
+
+#### Game page:
+
+- Wireframe of my Game page.
+
+![Wireframe of Game page](src/images/wireframe-gamepage.png)
+
+#### Ratings and Review features:
+
+- Wireframe of my rating and review features on the Game page beneath the game's description.
+
+![Wireframe of the ratings and review feature](src/images/wireframe-rating-review.png)
+
+#### Liked page:
+
+- Wireframe of my Liked page containing only liked games.
+
+![Wireframe of Liked page](src/images/wireframe-liked.png)
+
+#### Profile page:
+
+- Wireframe of my profile page.
+
+![Wireframe of Profile page](src/images/wireframe-profile.png)
 
 ### Colour Scheme:
 
