@@ -79,7 +79,7 @@ function GameEditForm() {
                     image,
                 }) : history.push("/");
             } catch (err) {
-                console.log(err);
+                // console.log(err);
             }
         };
 
@@ -128,7 +128,7 @@ function GameEditForm() {
             history.push(`/games/${id}`);
             toast.success('Game updated successfully!');
         } catch (err) {
-            console.log(err);
+            // console.log(err);
             if (err.response?.status !== 401) {
                 setErrors(err.response?.data);
             }

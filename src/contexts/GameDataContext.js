@@ -22,7 +22,7 @@ export const GameDataProvider = ({ children }) => {
           topRatedGames: data,
         }));
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
     fetchTopRatedGames();

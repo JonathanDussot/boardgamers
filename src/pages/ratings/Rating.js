@@ -44,7 +44,7 @@ const Rating = ({ gameId }) => {
                 }
             } catch (err) {
                 setError(true);
-                console.error(err);
+                // console.error(err);
             } finally {
                 setLoading(false);
             }
@@ -90,7 +90,7 @@ const Rating = ({ gameId }) => {
             setUserRating(null);
             toast.success('Rating submitted successfully!');
         } catch (err) {
-            console.error('Error submitting rating:', err);
+            // console.error('Error submitting rating:', err);
         }
     };
 
@@ -115,16 +115,16 @@ const Rating = ({ gameId }) => {
             setEditingValue(null);
             toast.success('Rating updated successfully!');
         } catch (err) {
-            console.error('Error editing rating:', err);
+            // console.error('Error editing rating:', err);
 
             if (err.response) {
-                console.error('Response data:', err.response.data);
-                console.error('Response status:', err.response.status);
-                console.error('Response headers:', err.response.headers);
+                // console.error('Response data:', err.response.data);
+                // console.error('Response status:', err.response.status);
+                // console.error('Response headers:', err.response.headers);
             } else if (err.request) {
-                console.error('No response received:', err.request);
+                // console.error('No response received:', err.request);
             } else {
-                console.error('Error setting up the request:', err.message);
+                // console.error('Error setting up the request:', err.message);
             }
         }
     };
@@ -136,7 +136,7 @@ const Rating = ({ gameId }) => {
             localStorage.setItem('showDeletedToast', true);
             window.location.reload();
         } catch (err) {
-            console.error('Error deleting rating:', err);
+            // console.error('Error deleting rating:', err);
         }
     };
 

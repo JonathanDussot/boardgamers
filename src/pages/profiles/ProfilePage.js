@@ -18,7 +18,7 @@ const ProfilePage = () => {
         const { data } = await axiosReq.get(`/profiles/${id}/`);
         setProfileData(data);
       } catch (err) {
-        console.error(err);
+        // console.error(err);
       }
     };
 

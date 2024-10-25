@@ -42,7 +42,7 @@ function ReviewCreateForm(props) {
       setContent("");
       toast.success('Review submitted successfully!');
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 

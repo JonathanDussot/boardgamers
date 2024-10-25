@@ -36,7 +36,7 @@ function GamePage() {
                 setGame({ results: [game] });
                 setReviews(reviews);
             } catch (err) {
-                console.log(err);
+                // console.log(err);
             }
         };
 

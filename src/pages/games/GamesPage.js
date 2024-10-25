@@ -34,7 +34,7 @@ function GamesPage({ message, filter = "" }) {
                 setGames(data);
                 setHasLoaded(true);
             } catch (err) {
-                console.log(err);
+                // console.log(err);
             }
         };
 

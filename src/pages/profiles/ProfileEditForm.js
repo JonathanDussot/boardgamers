@@ -46,7 +46,7 @@ const ProfileEditForm = () => {
                     const { name, favourite_game, image } = data;
                     setProfileData({ name, favourite_game, image });
                 } catch (err) {
-                    console.log(err);
+                    // console.log(err);
                     history.push("/");
                 }
             } else {
@@ -85,7 +85,7 @@ const ProfileEditForm = () => {
             history.goBack();
             toast.success('Profile updated successfully!');
         } catch (err) {
-            console.log(err);
+            // console.log(err);
             setErrors(err.response?.data);
         }
     };

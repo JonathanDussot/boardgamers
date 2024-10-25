@@ -39,7 +39,7 @@ function ReviewEditForm(props) {
             setShowEditForm(false);
             toast.success('Review updated successfully!');
         } catch (err) {
-            console.log(err);
+            // console.log(err);
         }
     };
 

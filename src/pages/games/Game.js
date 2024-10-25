@@ -53,7 +53,7 @@ const Game = (props) => {
       history.goBack();
       toast.success('Game deleted successfully!');
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -71,7 +71,7 @@ const Game = (props) => {
       }));
       toast.success('Added to your "Liked" page!');
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -89,7 +89,7 @@ const Game = (props) => {
       }));
       toast.success('Game removed from your "Liked" page');
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 

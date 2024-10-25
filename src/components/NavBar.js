@@ -23,13 +23,13 @@ const NavBar = () => {
   // Handles the option to sign out and removes refresh token
   const handleSignOut = async () => {
     try {
-      console.log("Current User:", currentUser);
+      // console.log("Current User:", currentUser);
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
       removeTokenTimestamp();
-      console.log("Current User:", currentUser);
+      // console.log("Current User:", currentUser);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
