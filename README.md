@@ -435,7 +435,7 @@ The results from WAVE mostly highlight that icons don't have a link when infact 
 - "react-toastify": "^9.1.3",
 - "web-vitals": "^1.1.2"
 
-## Deployment
+## Development and Deployment
 
 ### Heroku
 
@@ -445,7 +445,7 @@ This site is deployed using Heroku. To deploy it from its GitHub repository to H
 2. Click on the _New_ button and select _Create new app_
 3. Give it a unique name and choose the region _Europe_
 4. Click the *Deploy* tab, go to the _Deployment method_ section, select _GitHub_ and confirm this selection by clicking on the _Connect to Github_ button
-5. Search for the repository name on github _GamesBlog-frontend_ and click the _Connect_ button
+5. Search for the repository name on github _Boardgamers_ and click the _Connect_ button
 6. Inside the src folder add an api folder and create an axiosDefault.jsx
 7. Add the link to the deployed version of the api as baseURL
 8. Create a _Procfile_ in the root directory and add *web: npm run start*
@@ -473,8 +473,6 @@ Run Application:
 
 ```npm start```
 
-## Development and Deployment
-
 ### Development
 
 #### Forking GitHub Repository
@@ -499,31 +497,14 @@ Cloning allows you to download a local version of a chosen repository. Cloning c
 
 ## Credits
 
-### Content
-- “I think therefore I blog” walkthrough: Assisted me hugelyfrom the start with initial steps such as commands, adding apps, designing models and the many installed apps and their purposes.  Permitted me to add on to them and expand what I already had.
+- “Moments” walkthrough: Helped me immensely with the initial setup for my project and basic functions to help me then expand and personalize with my fetures and my own apps.
 - Slack community for the vast amount of support and information available to clear doubts and help with potential bugs.
 - Tutor Support for their constant support with some of the questions or issues I had and the patience to make everything so clear and such a pleasant learning experience.
-- CI for providing us with an exclusive Gitpod which helped tremendously considering the amount of hours dedicated to putting this project together, and hopefully many more for the future implementations and improvements to be made.
-- **Location content**:
-- [Royal Alaska Movers](https://www.royalalaskanmovers.com/north-pole-alaska-visitors-guide/) provided me with the content for Santa Claus's house within the blog posts.
-- [Komoot](https://www.komoot.com/guide/1812719/attractions-in-fairbanks-north-star-borough) provided me with the content for the northern lights within the blog posts.
-- [The Culture Trip](https://theculturetrip.com/south-america/peru/articles/how-to-visit-the-nazca-lines-in-peru) provided me with the content for the Nazca Lines within the blog posts.
-- [Osprey Expeditions](https://ospreyexpeditions.com/interesting-facts-about-cano-cristales/) provided me with the content for Cano Cristales within the blog posts.
-- [Forbes](https://www.forbes.com/sites/trevornace/2016/03/02/rainbow-mountains-china-earths-paint-palette/) provided me with the content for the Rainbow mountains in China within the blog posts.
-- [Atlas Obscura](https://www.atlasobscura.com/places/santa-maria-dellisola-monastery) provided me with the content for the Monastery of Santa Maria Tropea within the blog posts.
-- [Great Blue Hole](https://greatbluehole.net/) provided me with the content for the Great Blue Hole within the blog posts.
-- [Jrailpass](https://www.jrailpass.com/blog/ashikaga-flower-park#:~:text=The%20Ashikaga%20Flower%20Park%20first,monument%20by%20the%20Tochigi%20Prefecture) provided me with the content for Ashikaga Flower Park within the blog posts.
-- [Neuschwanstein Tickets](https://neuschwansteintickets.com/) provided me with the content for Neuschwanstein Castle within the blog posts.
-- [Waitomo](https://www.waitomo.com/glowworms-and-caves/waitomo-glowworm-caves) provided me with the content for the Glow-worm Caves within the blog posts.
-- [Indonesia Travel](https://www.indonesia.travel/gb/en/destinations/bali-nusa-tenggara/flores/lake-kelimutu.html) provided me with the content for the Kelimutu lakes within the blog posts.
-- [Inside Kyoto](https://www.insidekyoto.com/arashiyama-bamboo-grove) provided me with the content for the Bamboo Groves within the blog posts.
-- [https://ukraine.ua](https://ukraine.ua/cities-places/tunnel-of-love/) provided me with the content for the tunnel of love within the blog posts.
-- [Go Visit Costa Rica](https://www.govisitcostarica.com/region/city.asp?cID=69) provided me with the content for Montaverde within the blog posts.
-- [Adventure Clues](https://www.adventureclues.com/articles/36-unknown-places-in-the-world-that-will-take-your-breath-away/) provided me with alot of information about nearly all the locations chosen and gave me some great content to use within the excerpts
-- [Adventurous Kate](https://www.adventurouskate.com/travel-resources/) for the extremely useful travelling tips used within my 'Travel Resources' section.
+- CI for providing us with a GitPod that I've spent manu hours on for this project, and hopefully many more for the future implementations and improvements to be made.
+
+### Content
+- The majority of the descriptions for my Games Pages came from [BoardGameGeek](https://boardgamegeek.com/)
+
 
 ### Media
-- [Freepik](https://www.freepik.es/search?format=search&last_filter=query&last_value=travel&query=travel) Here I got my [travel-suitcases.jpeg](static/images-readme/travel-suitcases.jpg) image.
-- [Pexels](https://www.pexels.com/photo/people-sitting-on-boat-2108832/) I used the [pexels-riverboat.jpg](static/images-readme/pexels-riverboat.jpg) image from this sit provided by a photographer named Streetwindy.
-- [Pexels](https://www.pexels.com/search/suitcase/) provided me with the [pexels-suitcase.jpg](static/images-readme/pexels-suitcase.jpg) image to use within the Resources section.
-- [Flash Packer Connect](https://www.flashpackerconnect.com/blog/visiting-cano-cristales-a-journey-to-colombias-most-colorful-river) provided me with the [cano-cristales-post.jpeg](static/images-readme/cano-cristales-post.jpeg).
+- [@anete-lusina](https://www.pexels.com/@anete-lusina/) provided me with the image for my sign up and sign in forms.
