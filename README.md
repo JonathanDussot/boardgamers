@@ -129,13 +129,13 @@ These can be found in our [API's README.md](https://github.com/JonathanDussot/dr
 
 #### Games page:
 
-- Wireframe of my Games page containing list of games.
+- Wireframe of my Games page containing search bar and list of games.
 
 ![Game page](src/images/wireframe-gamespage.png)
 
 #### Game page:
 
-- Wireframe of my Game page.
+- Wireframe of my Game page with the total count of likes, reviews and ratings just below the description.
 
 ![Wireframe of Game page](src/images/wireframe-gamepage.png)
 
@@ -153,7 +153,7 @@ These can be found in our [API's README.md](https://github.com/JonathanDussot/dr
 
 #### Profile page:
 
-- Wireframe of my profile page.
+- Wireframe of my profile page with icon to the top-right corner to update profile information.
 
 ![Wireframe of Profile page](src/images/wireframe-profile.png)
 
@@ -243,6 +243,8 @@ All the images of dice in this image were taken from [freeiconspng](https://www.
 ![Review feature](src/images/review-feature.png)
 
 #### Like icon feature:
+
+- Like icon highlights if previously selected by user.
 
 ![Like icon feature](src/images/like-icon.png)
 
@@ -339,7 +341,7 @@ I ran the website through the validator and recieved no errors.
 I ran the website through the validator and recieved no errors.
 ![W3c Validator CSS](src/images/w3cvalidator-css.png)
 
-- I also checked each of my JS fies through JSHint and found no errors in any of the files
+- I also checked each of my JS fies through [JSHint](https://jshint.com/) and found no errors in any of the files
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** |
 | ----------------------------- | ----------------------- | --------------------------- | ---------- |
@@ -384,8 +386,13 @@ The results from WAVE mostly highlight that icons don't have a link when infact 
 | Reviews - Read   | Retrieve all instances | Instances visible in UI  | ✅         |
 | Reviews - Update | Add new instance | Mods saved & visible     | ✅         |
 | Reviews - Delete   | Retrieve all instances | Instance removed | ✅         |
-| Like - Create | Add new instance to DB | Instance created         | ✅         |
-| Like - Delete | Delete an instance     | Instance removed from UI | ✅         |
+| Likes - Create | Add new instance to DB | Instance created         | ✅         |
+| Likes - Delete | Delete an instance     | Instance removed from UI | ✅         |
+| Ratings - Create | Add new instance to DB | Instance created         | ✅         |
+| Ratings - Update | Add new instance | Mods saved & visible     | ✅         |
+| Ratings - Delete | Delete an instance     | Instance removed from UI | ✅         |
+| User Profile - Read   | Retrieve all instances | Instances visible in UI  | ✅         |
+| User Profile - Update | Add new instance | Mods saved & visible     | ✅         |
 
 ### FEATURES
 
@@ -434,6 +441,7 @@ The results from WAVE mostly highlight that icons don't have a link when infact 
 - [FreeLogoDesign](https://app.freelogodesign.org/)
 - [Colormind.io](http://colormind.io/) to generate color palette used. 
 - [react bootstrap](https://react-bootstrap.netlify.app/) for bootstrap.
+- [react toastify](https://deadsimplechat.com/blog/react-toastify-the-complete-guide/#what-are-toast-notifications)
 
 ### Databases
 
