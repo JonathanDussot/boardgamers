@@ -43,7 +43,7 @@ You can also view the backend API along with its README.md [HERE](https://github
   + [Bug Testing](#bug-testing "Bug Testing")
 + [Technologies Used](#technologies-used "Technologies Used")
   + [Main Languages Used](#main-languages-used "Main Languages Used")
-  + [Frameworks, Libraries & Programs Used](#frameworks-libraries-programs-used "Frameworks, Libraries & Programs Used")
+  + [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used "Frameworks, Libraries & Programs Used")
   + [Databases](#databases "Databases")
   + [Installed dependencies](#installed-dependancies "Installed dependencies")
 + [Development and Deployment](#development-and-deployment "Development and Deployment")
