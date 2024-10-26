@@ -159,31 +159,22 @@ These can be found in our [API's README.md](https://github.com/JonathanDussot/dr
 
 ### Colour Scheme:
 
-![Colour Palette](static/images-readme/colour-scheme.png)
+![Colour Palette](src/images/colour-palette.png)
 
-P
-E
-N
-D
-I
-N
-G
-!
-!
-!
+- #ffffff - Typically used as background colour for Navbar and card containers.
+
+- #f8f8f8 - Used as background colour of the app to provide an elegant contrast for elements with #ffffff.
+
+- #e4454f - This colour is used to match the red colour from the logo and highlight icons when user hovers the mouse over them.
+
+- #888888 - Used as the color of my nav items and icons throughout the app.
+
+- #2142b2 - Primarily used for my buttons throughout the app.
 
 ### Typography:
 All fonts were obtained from the Google Fonts library. I chose the following fonts for the page:
-P
-E
-N
-D
-I
-N
-G
-!
-!
-!
+
+- DM Sans - used throughout the page giving it a neutral, user-friendly feel.
 
 ### Imagery:
 
@@ -207,7 +198,7 @@ This image was taken from [Pexels](https://www.pexels.com/@anete-lusina/) for my
 
 #### Dice (Rating)
 
-All the images of dice in this image were taken from [freeiconspng](https://www.freeiconspng.com/images/dice-png) for my dice rating system.
+All the images of dice in this image were taken from [freeiconspng](https://www.freeiconspng.com/images/dice-png) for my dice rating system.  This was chosen to fit the theme of board games a little better.
 
 ![Dice](src/images/dice-all.png)
 
@@ -536,4 +527,6 @@ Cloning allows you to download a local version of a chosen repository. Cloning c
 
 
 ### Media
-- [@anete-lusina](https://www.pexels.com/@anete-lusina/) provided me with the image for my sign up and sign in forms.
+- [Pexels (@anete-lusina)](https://www.pexels.com/@anete-lusina/) provided me with the image for my sign up and sign in forms.
+- CI for the default images for both profile and posts which has been stored in Cloudinary.
+- Dice images
