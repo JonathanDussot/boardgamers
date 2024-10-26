@@ -50,7 +50,7 @@ const UserPasswordForm = () => {
     try {
       await axiosRes.post("/dj-rest-auth/password/change/", userData);
       history.goBack();
-      toast.success('Rating updated successfully!');
+      toast.success('Password updated successfully!');
     } catch (err) {
       // console.log(err);
       setErrors(err.response?.data);
