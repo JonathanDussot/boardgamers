@@ -15,23 +15,38 @@ You can also view the backend API along with its README.md [HERE](https://github
   + [Communication](#communication "Communication")
   + [Existing User Goals](#existing-user-goals "Existing User Goals")
   + [New User Goals](#new-user-goals "New User Goals")
+  + [Future Goals](#future-goals "Future Goals")
 + [User Stories](#user-stories "User Stories")
   + [Admin stories](#admin-stories "Admin stories")
   + [Site User stories](#site-user-stories "Site User stories")
 + [Design](#design "Design")
+  + [Wireframes](#wireframes "Wireframes")
+    + [Sign up](#sign-up "Sign up")
+    + [Sign in](#sign-in "Sign in")
+    + [Games page](#games-page "Games page")
+    + [Game page](#game-page "Game page")
+    + [Ratings and Review features](#ratings-and-review-features "Ratings and Review features")
+    + [Liked page](#liked-page "Liked page")
+    + [Profile page](#profile-page "Profile page")
   + [Colour Scheme](#colour-scheme "Colour Scheme")
   + [Typography](#typography "Typography")
   + [Imagery](#imagery "Imagery")
 + [Features](#features "Features")
   + [Existing Features](#existing-features "Existing Features")
   + [C.R.U.D](#crud "C.R.U.D")
+  + [Future Implementations](#future-implementations "Future Implementations")
 + [Testing](#testing "Testing")
   + [Validator Testing](#validator-testing "Validator Testing")
-  + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
+  + [Responsiveness Testing](#responsiveness-testing "Responsiveness Testing")
+  + [C.R.U.D. Testing](#crud-testing "C.R.U.D. Testing")
+  + [Feature Testing](#feature-testing "Feature Testing")
+  + [Bug Testing](#bug-testing "Bug Testing")
 + [Technologies Used](#technologies-used "Technologies Used")
   + [Main Languages Used](#main-languages-used "Main Languages Used")
   + [Frameworks, Libraries & Programs Used](#frameworks-libraries-programs-used "Frameworks, Libraries & Programs Used")
-+ [Deployment](#deployment "Deployment")
+  + [Databases](#databases "Databases")
+  + [Installed dependencies](#installed-dependancies "Installed dependencies")
++ [Development and Deployment](#development-and-deployment "Development and Deployment")
 + [Credits](#credits "Credits")
   + [Content](#content "Content")
   + [Media](#media "Media")
@@ -394,7 +409,7 @@ The results from WAVE mostly highlight that icons don't have a link when infact 
 | User Profile - Read   | Retrieve all instances | Instances visible in UI  | ✅         |
 | User Profile - Update | Add new instance | Mods saved & visible     | ✅         |
 
-### FEATURES
+### FEATURE TESTING
 
 | **TEST**                      | **ACTION**             | **EXPECTATION**                                           | **RESULT** |
 | ----------------------------- | ---------------------- | --------------------------------------------------------- | ---------- |
@@ -447,7 +462,7 @@ The results from WAVE mostly highlight that icons don't have a link when infact 
 
 - [PostgreSQL](https://dbs.ci-dbs.net/)
 
-### Installed Dependancies:
+### Installed Dependencies:
 - "@testing-library/jest-dom": "^5.14.1",
 - "@testing-library/react": "^11.2.7",
 - "@testing-library/user-event": "^12.8.3",
