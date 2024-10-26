@@ -321,7 +321,7 @@ These were supplied by [react toastify](https://deadsimplechat.com/blog/react-to
 
 ![CRUD - Profile Page edit](src/images/profile-page-edit.png)
 
-### Features Left to Implement
+### Future Implementations
 - Using the GameDataContext.js, we plan to add a feature to the game to display the top-rated games according to the total averages our community users have given.
 - Forum for users to have more in-depth conversations and thus increase user interaction within the community.
 - Nested comments within the review section to users to interact or react to each other's reviews.
