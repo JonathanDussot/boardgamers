@@ -7,6 +7,16 @@ The live link for "BoardGamers" can be found [HERE](https://boardgamers-ci-364d7
 
 You can also view the backend API along with its README.md [HERE](https://github.com/JonathanDussot/drf-api-bg)
 
+## DevOps Roadmap for This Project
+
+- [ ] Dockerize backend
+- [ ] Add docker-compose for API + DB
+- [ ] Set up GitHub Actions CI (tests + build)
+- [ ] Deploy container to cloud
+- [ ] Add Terraform infrastructure
+- [ ] Add Kubernetes deployment
+
+
 ## Table of Contents
 + [UX](#ux "UX")
   + [Site Purpose](#site-purpose "Site Purpose")
